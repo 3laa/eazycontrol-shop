@@ -1,0 +1,18 @@
+symfony serve:start
+symfony serve:stop
+
+php bin/console debug:router
+php bin/console cache:clear
+php bin/console cache:pool:clear cache.app_clearer
+
+php bin/console make:entity Section
+
+php bin/console doctrine:database:create
+php bin/console make:migration
+
+php bin/console doctrine:migrations:diff
+php bin/console doctrine:migrations:migrate
+
+php bin/console security:encode-password
+
+composer require symfony/apache-pack

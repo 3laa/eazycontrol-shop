@@ -1,0 +1,21 @@
+backend:
+    resource: ../../src/Controller/Backend/
+    type: annotation
+    name_prefix: backend_
+    prefix: '/EazyControl'
+    options:
+        expose: true
+
+frontend:
+    resource: ../../src/Controller/Frontend/
+    type: annotation
+    name_prefix: frontend_
+    prefix:
+        default: '/'
+        ar: '/ar/'
+    options:
+        expose: true
+
+kernel:
+    resource: ../../src/Kernel.php
+    type: annotation

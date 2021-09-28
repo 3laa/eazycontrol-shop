@@ -1,0 +1,12 @@
+twig:
+    form_themes: ['bootstrap_5_layout.html.twig', 'theme/custom-types/custom-types.html.twig']
+    default_path: '%kernel.project_dir%/eazycontrol/backend/templates'
+    paths:
+        'eazycontrol/backend/templates': 'backend'
+        'eazycontrol/frontend/templates': 'frontend'
+    globals:
+        backend: '@App\Service\BackendService'
+
+when@test:
+    twig:
+        strict_variables: true

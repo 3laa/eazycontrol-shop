@@ -1,0 +1,10 @@
+"api-platform/core": "^2.6",
+"friendsofsymfony/ckeditor-bundle": "^2.3",
+"friendsofsymfony/jsrouting-bundle": "^2.7",
+"knplabs/knp-paginator-bundle": "^5.6",
+"nelmio/cors-bundle": "^2.1",
+"omines/datatables-bundle": "^0.5.5",
+"webonyx/graphql-php": "^14.9"
+"deployer/deployer": "^6.8",
+"symfony/webpack-encore-bundle": "^1.12",
+"symfony/apache-pack": "^1.0",
