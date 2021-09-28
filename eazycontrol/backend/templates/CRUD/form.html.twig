@@ -1,0 +1,27 @@
+{% extends "@backend/theme/layout-base.html.twig" %}
+{% block body %}
+  <div class="content-bar">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">{{ breadcrumb }} </li>
+        {% if entity.name %}
+          <li class="breadcrumb-item">{{ entity.id }} - {{ entity.name }}</li>
+        {% elseif entity.title['default'] is defined %}
+          <li class="breadcrumb-item">{{ entity.id }} - {{ entity.title['default'] }}</li>
+        {% endif %}
+      </ol>
+    </nav>
+  </div>
+  <div class="content-wrapper">
+    <div class="card">
+      <h3 class="card-header">{{ breadcrumb }} - {% if entity.name %}{{ entity.name }}{% elseif entity.title['default'] is defined %}{{ entity.title['default'] }}{% endif %}</h3>
+      <div class="card-body">
+
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ include('@backend/theme/form-submit.html.twig') }}
+        {{ form_end(form) }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

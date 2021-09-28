@@ -1,0 +1,91 @@
+{% extends "@backend/theme/layout-base.html.twig" %}
+{% block body %}
+  <div class="content-bar">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">{{ page.id }} - {{ page.title['default'] }}</li>
+        <li class="breadcrumb-item">Sections</li>
+      </ol>
+    </nav>
+  </div>
+  <div class="content-wrapper">
+    <div class="row show">
+      <div class="col-8 sections">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Sections</h2>
+
+            <ul class="cards-list sections-list {% if page.sections|length == 0 %}-empty{% endif %}">
+              {% for key, section in page.sections %}
+                {% set iconActive = 'fa-eye-slash' %}
+                {% if section.isActive['default'] is defined %}
+                  {% if section.isActive['default'] %}
+                    {% set iconActive = 'fa-eye' %}
+                  {% endif %}
+                {% endif %}
+                <li class="card-item" data-section="{{ section.id }}">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-panel">
+                        <div class="panel-icon">
+                          {% if section.category.media['image'] is defined %}
+                            <img src="{{ section.category.media['image'] }}">
+                          {% endif %}
+                        </div>
+                        <div class="panel-info">
+                          <h3 class="panel-title">{{ section.title['default'] }}</h3>
+                          <h6 class="panel-text"> {{ section.category.name }} </h6>
+                        </div>
+                        <div class="panel-options card-options">
+                          <a href="{{ path('backend_website_section_edit', {id: section.id}) }}" class="option">
+                            <i class="fas fa-pencil-alt"></i>
+                          </a>
+                          <a href="{{ path('backend_website_section_delete', {id: section.id}) }}" data-swal="Are you sure?" class="option">
+                            <i class="far fa-trash-alt"></i>
+                          </a>
+                          <div class="option option-sort" >
+                            <i class="fas fa-sort"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-4 categories">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Categories</h2>
+            <ul class="cards-list categories-list">
+              {% for key, category in categories %}
+                <li class="card-item category-item" data-category="{{ category.id }}" data-page="{{ page.id }}">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-panel">
+                        <div class="panel-icon">
+                          {% if category.media['image'] is defined %}
+                            <img src="{{ category.media['image'] }}">
+                          {% endif %}
+                        </div>
+                        <div class="panel-info">
+                          <h3 class="panel-title">{{ category.name }}</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

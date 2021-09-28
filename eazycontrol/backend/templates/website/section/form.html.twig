@@ -1,0 +1,50 @@
+{% extends "@backend/theme/layout-base.html.twig" %}
+{% block body %}
+  <div class="content-bar">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Section :: Page</li>
+        <li class="breadcrumb-item">{{ page.id }} - {{ page.title['default'] }}</li>
+        <li class="breadcrumb-item">From Category</li>
+        <li class="breadcrumb-item">{{ category.name }} </li>
+      </ol>
+    </nav>
+  </div>
+  <div class="content-wrapper">
+    {{ form_start(form) }}
+    <div class="d-flex flex-column-reverse">
+
+      {{ include('@backend/website/section/contents.html.twig') }}
+
+      {% if form.viewOptions is defined %}
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">View Options</h4>
+            {{ form_widget(form.viewOptions) }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if form.media is defined %}
+        <div class="card form-card card-media">
+          <div class="card-body">
+            <h4 class="mb-2">Media</h4>
+            {{ form_widget(form.media) }}
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">General</h4>
+          {% for child in form|filter(child => not child.rendered) %}
+            {{ form_row(child) }}
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+    {{ include('@backend/theme/form-submit.html.twig') }}
+    {{ form_end(form) }}
+  </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+$white:              #ffffff;
+$black:              #2c3e50;
+$color-alpha:        #2d9dd8;
+$color-alpha-dark:   darken($color-alpha, 20);
+$color-alpha-light:  lighten($color-alpha, 15);
+$color-text:         #7d7d83;
+$color-background:   #f8faf9;
+$color-border:       #cacaca;
+$color-red:          rgb(180,0,0);
+$background-gradient :  linear-gradient(90deg,$color-alpha-dark 0,$color-alpha 48%,$color-alpha-light 100%);
+
+$SourceSansPro: 'Source Sans Pro', sans-serif;
+
+$body-line-height:           1.6;
+$body-font-family:           $SourceSansPro;
+$body-letter-spacing:        -0.75px;
+$body-word-spacing:          0px;
+
+$headline-line-height:       1.8;
+$headline-font-family:       $SourceSansPro;
+$headline-letter-spacing:    0px;
+$headline-word-spacing:      0px;
+
+$font-size-base-x-small: 8px;
+$font-size-base-small: 10px;
+$font-size-base: 12px;
+$font-size-base-h6: 12px;
+$font-size-base-h5: 14px;
+$font-size-base-h4: 16px;
+$font-size-base-h3: 18px;
+$font-size-base-h2: 20px;
+$font-size-base-h1: 22px;
+
+$font-weight-300:           300;
+$font-weight-400:           400;
+$font-weight-500:           400;
+$font-weight-600:           600;
+$font-weight-700:           700;
+$font-weight-800:           700;
+$font-weight-900:           900;

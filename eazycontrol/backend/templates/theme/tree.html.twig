@@ -1,0 +1,11 @@
+<div class="tree">
+  <h3>Website</h3>
+  {{ include('@backend/theme/menu.html.twig', {menu: backend.eazyControl.website, type: 'website', icon: 'fa-network-wired'}) }}
+  <hr>
+  <h3>Shop</h3>
+  {{ include('@backend/theme/menu.html.twig', {menu: backend.eazyControl.shop, type: 'shop', icon: 'fas fa-store'}) }}
+  <hr>
+  <h3>Blog</h3>
+  {{ include('@backend/theme/menu.html.twig', {menu: backend.eazyControl.blog, type: 'blog', icon: 'far fa-newspaper'}) }}
+
+</div>

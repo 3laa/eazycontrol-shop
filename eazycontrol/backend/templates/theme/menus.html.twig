@@ -1,0 +1,113 @@
+{% set root = backend.eazyControl.root %}
+
+{% if menu.pages|length > 0 %}
+  {% for page in menu.pages %}
+
+    {% set iconMain = 'fa-file' %}
+    {% if page.pages|length > 0 %}
+      {% set iconMain = 'fa-folder' %}
+    {% endif %}
+
+    {% if page.link['default']['url'] is defined %}
+      {% if page.link['default']['url'] %}
+        {% set iconMain = 'fa-link' %}
+      {% endif %}
+    {% endif %}
+
+    {% if page.shortcut['website'] is defined %}
+      {% if page.shortcut['website'] %}
+        {% set iconMain = 'fa-link' %}
+      {% endif %}
+    {% endif %}
+
+    {% if page.shortcut['shop'] is defined %}
+      {% if page.shortcut['shop'] %}
+        {% set iconMain = 'fas fa-store' %}
+      {% endif %}
+    {% endif %}
+
+    {% if page.shortcut['blog'] is defined %}
+      {% if page.shortcut['blog'] %}
+        {% set iconMain = 'far fa-newspaper' %}
+      {% endif %}
+    {% endif %}
+
+    {% if page == root %}
+      {% set iconMain = 'fa-home' %}
+    {% endif %}
+
+    {% set iconActive = 'fa-eye-slash' %}
+    {% if page.isActive['default'] is defined %}
+      {% if page.isActive['default'] %}
+        {% set iconActive = 'fa-eye' %}
+      {% endif %}
+    {% endif %}
+
+    <div class="tree-item">
+      <div class="item-header">
+        <div class="item-options">
+
+          <div class="option">
+            {% if page.pages|length > 0 %}
+              <a href="{{ path('backend_page_toggle', {'id': page.id}) }}" class="option-icon option-icon-toggle fas fa-times {% if not page.isToggle %}collapsed{% endif %}" data-bs-toggle="collapse" data-bs-target="#collapse-menu-{{ page.id }}" data-page="{{ page.id }}" data-axios=""></a>
+            {% endif %}
+          </div>
+
+          <div class="option">
+            <i class="option-icon fas fa-sort"></i>
+          </div>
+
+            <div class="option">
+              {% if page.ableToChangeActive %}
+                <a href="{{ path('backend_page_active', {'id': page.id}) }}" class="option-icon fas {{ iconActive }}" data-axios="changePageActive" data-page="{{ page.id }}"></a>
+              {% endif %}
+            </div>
+
+          <div class="option">
+            <i class="option-icon fas fa-cogs" data-bs-toggle="dropdown" id="page-settings-{{ page.id }}"></i>
+            <ul class="dropdown-menu" aria-labelledby="page-settings-{{ page.id }}">
+              {% if page.ableToAdd %}
+                <li>
+                  <a href="{{ path('backend_page_new', {'id': page.id, 'type': type}) }}" class="dropdown-item">
+                    <i class="fas fa-plus"></i> New
+                  </a>
+                </li>
+              {% endif %}
+              {% if page.ableToEdit %}
+                <li>
+                  <div class="dropdown-divider"></div>
+                  <a href="{{ path('backend_page_edit', {'id': page.id}) }}" class="dropdown-item">
+                    <i class="fas fa-pen"></i> Edit
+                  </a>
+                </li>
+              {% endif %}
+              {% if page.pages|length <= 0 and page != root and page.ableToDelete %}
+                <li>
+                  <div class="dropdown-divider"></div>
+                  <a href="{{ path('backend_page_delete', {'id': page.id}) }}" class="dropdown-item" data-swal="Are you sure?">
+                    <i class="fas fa-trash-alt"></i> Delete
+                  </a>
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+
+          <div class="option">
+            <i class="option-icon fas {{ iconMain }}"></i>
+          </div>
+        </div>
+        <a href="{{ path('backend_page_index', {'id': page.id}) }}" class="item-title">
+          <small class="mr-1">[{{ page.id }}]</small>
+          {% if page.title['default'] is defined %}
+            {{ page.title['default'] }}
+          {% endif %}
+        </a>
+      </div>
+      {% if page.pages|length > 0 %}
+      <div class="item-content collapse {% if page.isToggle %}show{% endif %}" id="collapse-menu-{{ page.id }}">
+        {{ include('@backend/theme/menus.html.twig', {menu: page, type: type}) }}
+      </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+{% endif %}

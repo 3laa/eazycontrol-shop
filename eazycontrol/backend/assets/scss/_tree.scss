@@ -1,0 +1,71 @@
+.tree {
+
+}
+
+.tree .tree-item {
+
+}
+
+.tree .tree-item .item-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all .35s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 0 1px rgba($color-border, .5);
+    background: rgba($color-border, .25);
+  }
+}
+
+.tree .tree-item .item-header .item-options {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tree .tree-item .item-header .item-options .option {
+  width: 18px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:nth-child(1),
+  &:nth-child(3),
+  &:nth-child(5)
+  {
+    & .option-icon {
+      color: $color-alpha;
+    }
+  }
+}
+
+.tree .tree-item .item-header .item-options .option .option-icon {
+  cursor: pointer;
+  font-size: 11px;
+  transition: all .35s ease-in-out;
+}
+
+.tree .tree-item .item-header .item-options .option .option-icon.option-icon-toggle {
+  transform: rotate(0deg);
+
+  &.collapsed {
+    transform: rotate(135deg);
+  }
+}
+
+.tree .tree-item .item-header .item-title {
+  padding-left: 5px;
+  height: 20px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  hyphens: auto;
+  cursor: pointer;
+}
+
+.tree .tree-item .item-content {
+  padding-left: 18px;
+}

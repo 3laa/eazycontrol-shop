@@ -1,0 +1,21 @@
+{% extends "@backend/theme/layout-base.html.twig" %}
+{% block body %}
+    <div class="content-bar">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="content-wrapper">
+      {{ include('@backend/show.html.twig') }}
+      {{ include('@backend/cards.html.twig') }}
+      {{ include('@backend/curd.html.twig') }}
+      {{ include('@backend/contents.html.twig') }}
+    </div>
+{% endblock %}
+
+
+

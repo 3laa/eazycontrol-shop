@@ -1,0 +1,117 @@
+html {
+  line-height: $body-line-height;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $body-font-family;
+  color: $color-text;
+  font-weight: $font-weight-400;
+  font-size: $font-size-base;
+  line-height: $body-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant-ligatures: no-common-ligatures;
+  -moz-font-feature-settings: "liga" 0, "clig" 0;
+  -webkit-font-feature-settings: "liga" 0, "clig" 0;
+  font-feature-settings: "liga" 0, "clig" 0;
+  overflow: hidden;
+}
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6,
+.h7 {
+  font-family: $headline-font-family;
+  font-weight: $font-weight-600;
+  line-height: $headline-line-height;
+  color: $black;
+  margin: 0;
+  letter-spacing: $headline-letter-spacing;
+  word-spacing: $headline-word-spacing;
+  padding: 0;
+  display: block;
+}
+
+h1, .h1 {
+  font-size: $font-size-base-h1;
+}
+
+h2, .h2 {
+  font-size: $font-size-base-h2;
+}
+
+h3, .h3 {
+  font-size: $font-size-base-h3;
+}
+
+h4, .h4 {
+  font-size: $font-size-base-h4;
+}
+
+h5, .h5 {
+  font-size: $font-size-base-h5;
+}
+
+h6, .h6 {
+  font-size: $font-size-base-h6;
+}
+
+.h7 {
+  font-size: $font-size-base-small;
+}
+
+
+p, .p {
+  font-family: $body-font-family;
+  font-weight: $font-weight-500;
+  line-height: $body-line-height;
+  margin-bottom: 10px;
+  margin-top: 0;
+  letter-spacing: $body-letter-spacing;
+  word-spacing: $body-word-spacing;
+  color: $color-text;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+b, .b
+strong, .strong,
+.bold {
+  font-weight: $font-weight-600;
+}
+
+small, .small {
+  font-size: $font-size-base-small;
+}
+
+.x-small {
+  font-size: $font-size-base-x-small;
+}
+
+a {
+  font-size: $font-size-base;
+  color: $color-text;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all .35s ease-in-out;
+
+  &.-active,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text;
+    text-decoration: none;
+  }
+}

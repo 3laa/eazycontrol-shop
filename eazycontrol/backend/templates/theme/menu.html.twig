@@ -1,0 +1,29 @@
+<div class="tree -{{ type }}" id="{{ type }}">
+  <div class="tree-item">
+    <div class="item-header">
+      <div class="item-options">
+        <div class="option">
+          <i class="option-icon option-icon-toggle fas fa-times" data-bs-toggle="collapse" data-bs-target="#collapse-menu-{{ menu.id }}"></i>
+        </div>
+
+        <div class="option">
+          <i class="option-icon fas fa-cogs" data-bs-toggle="dropdown" id="page-settings-{{ menu.id }}"></i>
+          <ul class="dropdown-menu" aria-labelledby="page-settings-{{ menu.id }}">
+            <li>
+              <a href="{{ path('backend_page_new', {'id': menu.id, 'type': type}) }}" class="dropdown-item">
+                <i class="fas fa-plus"></i> New
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="option">
+          <i class="option-icon fas {{ icon }}"></i>
+        </div>
+      </div>
+      <span class="item-title">{{ type }}</span>
+    </div>
+    <div class="item-content collapse show" id="collapse-menu-{{ menu.id }}">
+      {{ include('@backend/theme/menus.html.twig', {menu: menu, type: type}) }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{% block property_by_language_row %}
+  <div class="row input-control property_by_language">
+    <div class="col-12">
+      <h6>{{ form_label(form) }}</h6>
+    </div>
+    {% for child in form.children  %}
+      <div class="col {% if child.vars.attr.subclass is defined %}{{ child.vars.attr.subclass }}{% endif %}">
+        {{ form_row(child) }}
+      </div>
+    {% endfor %}
+  </div>
+{% endblock property_by_language_row %}

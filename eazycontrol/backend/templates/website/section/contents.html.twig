@@ -1,0 +1,44 @@
+{% if form.contents is defined %}
+  <div class="card collections-card mt-4" id="contents">
+    <div class="card-body">
+      <h4 class="card-title">Contents</h4>
+
+      <div class="collection-prototype " data-prototype="{{ form_widget(form.contents.vars.prototype)|e('html_attr') }}"></div>
+      <div class="collections-actions mb-3">
+        <div class="btn action action-new" data-type="{{ form.contents.vars.attr['data-type'] }}">
+          New <i class="fas fa-plus"></i>
+        </div>
+      </div>
+
+      <ul class="collections-items accordion" id="collections">
+        {% for content in form.contents %}
+          {% set contentId = content.vars.value.id %}
+          {% set title = 'NO-TITLE' %}
+          {% if content.children.title.children.default.vars.value != '' %}
+            {% set title = content.children.title.children.default.vars.value %}
+          {% endif %}
+          <li class="collection card">
+            <div class="card-header">
+              <h4 class="header-title" data-bs-toggle="collapse" data-bs-target="#collection-edit-{{ contentId }}" data-id="{{ contentId }}">{{ title }}</h4>
+              <div class="card-options">
+                <div class="option option-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#collection-edit-{{ contentId }}">
+                  <i class="option-icon fas fa-times" ></i>
+                </div>
+              </div>
+            </div>
+            <div class="card-body collapse" id="collection-edit-{{ contentId }}">
+              {{ form_row(content) }}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="collections-actions mt-3">
+        <div class="btn action action-new" data-type="{{ form.contents.vars.attr['data-type'] }}">
+          New <i class="fas fa-plus"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endif %}
