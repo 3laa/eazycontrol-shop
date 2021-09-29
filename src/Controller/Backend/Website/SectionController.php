@@ -119,4 +119,16 @@ class SectionController extends AbstractController
         }
         return $this->json(['response' => true], $status = 200, $headers = [], $context = []);
     }
+
+    /**
+     * @param Section $section
+     * @return JsonResponse
+     * @Route("/active/{id}", name="active")
+     */
+    public function active(Section $section): JsonResponse
+    {
+        $section->setIsActive(['default' => !$section->getIsActive()['default']]);
+        $this->entityManager->flush();
+        return $this->json(true);
+    }
 }

@@ -1,3 +1,21 @@
+{% block ck_finder_row %}
+  <div class="ck_finder" id="ck_finder-{{ form.vars.id }}">
+    <h6>{{ form_label(form) }}</h6>
+    <div class="ck_finder-wrapper">
+      {{ form_widget(form) }}
+      <div class="ck_finder-btn btn" data-btn="{{ form.vars.id }}"><i class="fa fa-folder-open"></i></div>
+      <div class="ck_finder-holder" id="holder-{{ form.vars.id }}">
+        <a href="{{ form.vars.value }}" class="-magnific-popup">
+          {% if form.vars.value %}
+            <img src="{{ form.vars.value }}">
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock ck_finder_row %}
+
+
 {% block property_by_language_row %}
   <div class="row input-control property_by_language">
     <div class="col-12">

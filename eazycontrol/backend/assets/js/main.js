@@ -1,9 +1,9 @@
-function initSelect2() {
-    $('select').select2();
-}
-
 function initMagnificPopup() {
     $('.-magnific-popup').magnificPopup({type:'image'});
+}
+
+function initSelect2() {
+    $('select').select2();
 }
 
 function sections() {
@@ -100,8 +100,7 @@ function axiosLink() {
     });
 }
 
-function changePageActive($element)
-{
+function changeActive($element) {
     $element.toggleClass('fa-eye-slash');
     $element.toggleClass('fa-eye');
 }
@@ -166,10 +165,40 @@ function emptyCollection(prototype, index) {
         '</li>';
 }
 
+function ckFinderChoseMedia() {
+    $(document).on('click', '.ck_finder .ck_finder-btn', function () {
+        let id = $(this).data('btn');
+        let $outputElement = $('#'+id);
+        let $holder = $('#holder-'+id);
+        CKFinder.popup({
+            chooseFiles: true,
+            width: 800,
+            height: 600,
+            onInit: function( finder ) {
+                finder.on('files:choose', function (event) {
+                    let file = event.data.files.first();
+                    $outputElement.val(file.getUrl());
+                    $holder.find('.-magnific-popup').html('<img src="'+file.getUrl()+'"/>');
+                    $holder.find('.-magnific-popup').attr('href', file.getUrl());
+                });
+            }
+        });
+    });
+
+    $(document).on('input', '.ck_finder .form-control', function () {
+        let id = $(this).attr('id');
+        let $holder = $(this).parents('.ck_finder').find('#holder-'+id);
+        $holder.find('.-magnific-popup').html('<img src="'+$(this).val()+'"/>');
+        $holder.find('.-magnific-popup').attr('href', $(this).val());
+    });
+}
+
 $(document).ready(function () {
+    initMagnificPopup();
     initSelect2();
     sections();
     sweetalert();
     axiosLink();
     newCollection();
+    ckFinderChoseMedia();
 });

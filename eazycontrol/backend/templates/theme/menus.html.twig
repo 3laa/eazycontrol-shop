@@ -59,7 +59,7 @@
 
             <div class="option">
               {% if page.ableToChangeActive %}
-                <a href="{{ path('backend_page_active', {'id': page.id}) }}" class="option-icon fas {{ iconActive }}" data-axios="changePageActive" data-page="{{ page.id }}"></a>
+                <a href="{{ path('backend_page_active', {'id': page.id}) }}" class="option-icon fas {{ iconActive }}" data-axios="changeActive" data-page="{{ page.id }}"></a>
               {% endif %}
             </div>
 
