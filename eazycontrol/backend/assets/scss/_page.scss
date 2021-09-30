@@ -1,4 +1,4 @@
-$sidebar-width: 250px;
+$sidebar-width: 300px;
 $bar-height: 50px;
 
 .page {
@@ -20,27 +20,32 @@ $bar-height: 50px;
   overflow: hidden;
   z-index: 200;
   box-shadow: 5px 0 20px 5px rgba($black,.05);
-  background: #fff;
+  background: $black;
+
+  & span {
+    color: $white;
+    text-transform: uppercase;
+  }
 }
 
 .page .page-sidebar .sidebar-top {
   height: $bar-height;
   width: 100%;
-  background: #fa8231;
+  border-bottom: 1px solid rgba($white, .08);
 }
 
 .page .page-sidebar .sidebar-middle {
   width: 100%;
   height: calc(100% - (#{$bar-height} + #{$bar-height}));
   padding: 10px;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
 .page .page-sidebar .sidebar-bottom {
   height: $bar-height;
   width: 100%;
-  background: #fed330;
+  border-top: 1px solid rgba($white, .08);
 }
 
 .page .page-bar {

@@ -49,7 +49,10 @@
 
           <div class="option">
             {% if page.pages|length > 0 %}
-              <a href="{{ path('backend_page_toggle', {'id': page.id}) }}" class="option-icon option-icon-toggle fas fa-times {% if not page.isToggle %}collapsed{% endif %}" data-bs-toggle="collapse" data-bs-target="#collapse-menu-{{ page.id }}" data-page="{{ page.id }}" data-axios=""></a>
+              <a href="{{ path('backend_page_toggle', {'id': page.id}) }}"
+                 class="option-icon option-icon-toggle fas fa-times {% if not page.isToggle %}collapsed{% endif %}"
+                 data-bs-toggle="collapse" data-bs-target="#collapse-menu-{{ page.id }}" data-page="{{ page.id }}"
+                 data-axios=""></a>
             {% endif %}
           </div>
 
@@ -57,11 +60,12 @@
             <i class="option-icon fas fa-sort"></i>
           </div>
 
-            <div class="option">
-              {% if page.ableToChangeActive %}
-                <a href="{{ path('backend_page_active', {'id': page.id}) }}" class="option-icon fas {{ iconActive }}" data-axios="changeActive" data-page="{{ page.id }}"></a>
-              {% endif %}
-            </div>
+          <div class="option">
+            {% if page.ableToChangeActive %}
+              <a href="{{ path('backend_page_active', {'id': page.id}) }}" class="option-icon fas {{ iconActive }}"
+                 data-axios="changeActive" data-page="{{ page.id }}"></a>
+            {% endif %}
+          </div>
 
           <div class="option">
             <i class="option-icon fas fa-cogs" data-bs-toggle="dropdown" id="page-settings-{{ page.id }}"></i>
@@ -84,7 +88,8 @@
               {% if page.pages|length <= 0 and page != root and page.ableToDelete %}
                 <li>
                   <div class="dropdown-divider"></div>
-                  <a href="{{ path('backend_page_delete', {'id': page.id}) }}" class="dropdown-item" data-swal="Are you sure?">
+                  <a href="{{ path('backend_page_delete', {'id': page.id}) }}" class="dropdown-item"
+                     data-swal="Are you sure?">
                     <i class="fas fa-trash-alt"></i> Delete
                   </a>
                 </li>
@@ -92,7 +97,7 @@
             </ul>
           </div>
 
-          <div class="option">
+          <div class="option option-main">
             <i class="option-icon fas {{ iconMain }}"></i>
           </div>
         </div>
@@ -104,9 +109,9 @@
         </a>
       </div>
       {% if page.pages|length > 0 %}
-      <div class="item-content collapse {% if page.isToggle %}show{% endif %}" id="collapse-menu-{{ page.id }}">
-        {{ include('@backend/theme/menus.html.twig', {menu: page, type: type}) }}
-      </div>
+        <div class="item-content collapse {% if page.isToggle %}show{% endif %}" id="collapse-menu-{{ page.id }}">
+          {{ include('@backend/theme/menus.html.twig', {menu: page, type: type}) }}
+        </div>
       {% endif %}
     </div>
   {% endfor %}

@@ -31,13 +31,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgba($white, .5);
 
-  &:nth-child(1),
-  &:nth-child(3),
-  &:nth-child(5)
-  {
-    & .option-icon {
-      color: $color-alpha;
+  &:hover {
+    color: $white;
+  }
+
+  &.option-main {
+    color: $color-alpha;
+
+    &:hover {
+      color: $color-alpha-dark;
     }
   }
 }
@@ -64,6 +68,11 @@
   white-space: nowrap;
   hyphens: auto;
   cursor: pointer;
+  color: rgba($white, .5);
+
+  &:hover {
+    color: $white;
+  }
 }
 
 .tree .tree-item .item-content {

@@ -155,14 +155,28 @@ function emptyCollection(prototype, index) {
         '<h4 class="header-title" data-bs-toggle="collapse" data-bs-target="#collection-'+index+'" >New '+index+'</h4>' +
 
         '<div class="card-options">' +
-        '<div class="option -collection-delete"><i class="fas fa-trash-alt"></i></div>' +
-        '<div class="option"><i class="fas fa-sort"></i></div>' +
+        '<div class="option -collection-delete"><i class="option-icon far fa-trash-alt"></i></div>' +
         '<div class="option option-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#collection-'+index+'"><i class="option-icon fas fa-times" ></i></div>' +
         '</div>' +
         '</div>' +
 
         '<div  class="card-body" id="collection-'+index+'">' + prototype +'</div>' +
         '</li>';
+}
+
+function deleteCollection() {
+    $(document).on('click', '.collection.card .-collection-delete', function () {
+        swal({
+            text: 'Are you sure?',
+            icon: 'warning',
+            buttons: true,
+            dangerMode: true,
+        }).then((willDelete)=>{
+            if (willDelete) {
+                $(this).parents('.collection.card').remove();
+            }
+        });
+    });
 }
 
 function ckFinderChoseMedia() {
@@ -201,4 +215,5 @@ $(document).ready(function () {
     axiosLink();
     newCollection();
     ckFinderChoseMedia();
+    deleteCollection();
 });

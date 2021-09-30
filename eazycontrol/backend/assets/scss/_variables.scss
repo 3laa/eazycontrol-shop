@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 $white:              #ffffff;
-$black:              #2c3e50;
-$color-alpha:        #2d9dd8;
+$black:              #1d212b;
+$color-alpha:        #1abb9c;
 $color-alpha-dark:   darken($color-alpha, 20);
 $color-alpha-light:  lighten($color-alpha, 15);
 $color-text:         #7d7d83;
@@ -12,14 +12,15 @@ $color-red:          rgb(180,0,0);
 $background-gradient :  linear-gradient(90deg,$color-alpha-dark 0,$color-alpha 48%,$color-alpha-light 100%);
 
 $SourceSansPro: 'Source Sans Pro', sans-serif;
+$Lato: 'Lato', sans-serif;
 
 $body-line-height:           1.6;
-$body-font-family:           $SourceSansPro;
+$body-font-family:           $Lato;
 $body-letter-spacing:        -0.75px;
 $body-word-spacing:          0px;
 
 $headline-line-height:       1.8;
-$headline-font-family:       $SourceSansPro;
+$headline-font-family:       $Lato;
 $headline-letter-spacing:    0px;
 $headline-word-spacing:      0px;
 

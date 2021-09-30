@@ -3,6 +3,7 @@
 namespace App\Controller\Backend\Website;
 
 use App\Entity\Category;
+use App\Entity\Content;
 use App\Entity\Page;
 use App\Entity\Section;
 use App\Repository\SectionRepository;
@@ -95,10 +96,21 @@ class SectionController extends AbstractController
      */
     public function delete(Section $section): RedirectResponse
     {
-        $pageId = $section->getPage()->getId();
         $this->entityManager->remove($section);
         $this->entityManager->flush();
-        return $this->redirectToRoute('backend_page_index', ['id' => $pageId]);
+        return $this->redirectToRoute('backend_page_index', ['id' => $section->getPage()->getId()]);
+    }
+
+    /**
+     * @param Content $content
+     * @return RedirectResponse
+     * @Route("/content/delete/{id}", name="content_delete")
+     */
+    public function sectionDelete(Content $content): RedirectResponse
+    {
+        $this->entityManager->remove($content);
+        $this->entityManager->flush();
+        return $this->redirectToRoute('backend_website_section_edit', ['id' => $content->getSection()->getId()]);
     }
 
     /**
