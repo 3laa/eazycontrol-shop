@@ -1,6 +1,9 @@
 symfony serve:start
 symfony serve:stop
 
+npm run watch
+npm run build
+
 php bin/console debug:router
 php bin/console cache:clear
 php bin/console cache:pool:clear cache.app_clearer

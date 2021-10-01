@@ -21,6 +21,7 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addStyleEntry('css-backend', ['./eazycontrol/backend/assets/scss/all.scss'])
+    .addStyleEntry('css-frontend', ['./eazycontrol/frontend/assets/scss/all.scss'])
 
 
 
@@ -86,6 +87,16 @@ Encore
     .copyFiles({
         from: './eazycontrol/backend/assets/js',
         to: 'backend/js/[path][name].[ext]',
+    })
+
+    // frontend
+    .copyFiles({
+        from: './eazycontrol/frontend/assets/images',
+        to: 'frontend/images/[path][name].[ext]',
+    })
+    .copyFiles({
+        from: './eazycontrol/frontend/assets/js',
+        to: 'frontend/js/[path][name].[ext]',
     })
 ;
 

@@ -1,0 +1,36 @@
+.section-slider {
+
+}
+
+.section-slider .slide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-slider {
+  & .slide-title,
+  & .slide-text,
+  & .slide-button {
+    visibility: hidden;
+    animation-duration: 2s;
+  }
+}
+
+.section-slider .swiper-slide.swiper-slide-active {
+  & .slide-title,
+  & .slide-text,
+  & .slide-button {
+    visibility: visible;
+  }
+
+  & .slide-title,
+  & .slide-text {
+    animation-name: fadeInDown;
+  }
+
+  & .slide-button {
+    animation-name: fadeInUp;
+  }
+}

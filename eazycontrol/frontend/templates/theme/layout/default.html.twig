@@ -1,0 +1,7 @@
+<html {% if app.request.locale == 'ar' %} class="-rtl" lang="ar" dir="rtl"{% else %}lang="en" dir="ltr"{% endif %}>
+{{ include('@frontend/theme/include/head.html.twig') }}
+<body>
+{% block body %}{% endblock %}
+{{ include('@frontend/theme/include/foot.twig') }}
+</body>
+</html>
