@@ -49,10 +49,10 @@
 
           <div class="option">
             {% if page.pages|length > 0 %}
-              <a href="{{ path('backend_page_toggle', {'id': page.id}) }}"
+              <div data-href="{{ path('backend_page_toggle', {'id': page.id}) }}"
                  class="option-icon option-icon-toggle fas fa-times {% if not page.isToggle %}collapsed{% endif %}"
                  data-bs-toggle="collapse" data-bs-target="#collapse-menu-{{ page.id }}" data-page="{{ page.id }}"
-                 data-axios=""></a>
+                 data-axios=""></div>
             {% endif %}
           </div>
 
@@ -62,8 +62,8 @@
 
           <div class="option">
             {% if page.ableToChangeActive %}
-              <a href="{{ path('backend_page_active', {'id': page.id}) }}" class="option-icon fas {{ iconActive }}"
-                 data-axios="changeActive" data-page="{{ page.id }}"></a>
+              <div data-href="{{ path('backend_page_active', {'id': page.id}) }}" class="option-icon fas {{ iconActive }}"
+                 data-axios="changeActive" data-page="{{ page.id }}"></div>
             {% endif %}
           </div>
 

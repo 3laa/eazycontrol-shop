@@ -87,7 +87,7 @@ function axiosLink() {
         event.preventDefault();
         let $this = $(this);
         let axiosFunction = $(this).data('axios');
-        let href =  $(this).attr('href');
+        let href =  $(this).data('href');
         axios.get(href).then(function (response) {
             if (response.data)
             {
@@ -123,9 +123,9 @@ function newCollection() {
                             appendCollection(prototype, file.getUrl())
                         });
 
-                        $('.row.ck_finder .ck_finder-col.ck_finder-input .form-control').each(function () {
+                        $('.ck_finder-wrapper .form-control').each(function () {
                             let id = $(this).attr('id');
-                            let $holder = $(this).parents('.row.ck_finder').find('#holder-'+id);
+                            let $holder = $(this).parents('.ck_finder-wrapper').find('#holder-'+id);
                             $holder.find('.-magnific-popup').html('<img src="'+$(this).val()+'"/>');
                             $holder.find('.-magnific-popup').attr('href', $(this).val());
                         });
@@ -143,24 +143,25 @@ function appendCollection(prototype, file) {
     prototype = prototype.replace(/__name__/g, index);
     prototype = prototype.replace(/_isActive_default"/g, '_isActive_default" checked ');
     if(file) {
-        prototype = prototype.replace(/media_image/g, 'media_image" value="'+file);
+        prototype = prototype.replace(/media_image" name=/g, 'media_image" value="'+file+'" name=');
     }
     $collectionsList.append(emptyCollection(prototype, index));
 }
 
 function emptyCollection(prototype, index) {
+    let title = index + 1;
     return '' +
         '<li class="collection card">' +
-        '<div class="card-header">' +
-        '<h4 class="header-title" data-bs-toggle="collapse" data-bs-target="#collection-'+index+'" >New '+index+'</h4>' +
+        '<div class="card-header dark">' +
+        '<h4 class="header-title " data-bs-toggle="collapse" data-bs-target="#collection-'+index+'" >New '+title+'</h4>' +
 
         '<div class="card-options">' +
         '<div class="option -collection-delete"><i class="option-icon far fa-trash-alt"></i></div>' +
-        '<div class="option option-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#collection-'+index+'"><i class="option-icon fas fa-times" ></i></div>' +
+        '<div class="option option-toggle " data-bs-toggle="collapse" data-bs-target="#collection-'+index+'"><i class="option-icon fas fa-times" ></i></div>' +
         '</div>' +
         '</div>' +
 
-        '<div  class="card-body" id="collection-'+index+'">' + prototype +'</div>' +
+        '<div  class="card-body collapse show" id="collection-'+index+'">' + prototype +'</div>' +
         '</li>';
 }
 

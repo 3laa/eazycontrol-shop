@@ -40,8 +40,8 @@
                           <a href="{{ path('backend_website_section_edit', {id: section.id}) }}" class="option">
                             <i class="fas fa-pencil-alt"></i>
                           </a>
-                          <a href="{{ path('backend_website_section_active', {id: section.id}) }}" data-axios="changeActive" class="fas {{ iconActive }} option">
-                          </a>
+                          <div data-href="{{ path('backend_website_section_active', {id: section.id}) }}" data-axios="changeActive" class="fas {{ iconActive }} option">
+                          </div>
                           <a href="{{ path('backend_website_section_delete', {id: section.id}) }}" data-swal="Are you sure?" class="option">
                             <i class="far fa-trash-alt"></i>
                           </a>

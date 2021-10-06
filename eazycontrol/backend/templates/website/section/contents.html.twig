@@ -18,7 +18,7 @@
             {% set title = content.children.title.children.default.vars.value %}
           {% endif %}
           <li class="collection card">
-            <div class="card-header">
+            <div class="card-header dark">
               <h4 class="header-title" data-bs-toggle="collapse" data-bs-target="#collection-edit-{{ contentId }}" data-id="{{ contentId }}">{{ title }}</h4>
               <div class="card-options">
                 <a href="{{ path('backend_website_section_content_delete', {id: contentId}) }}" data-swal="Are you sure?" class="option">
