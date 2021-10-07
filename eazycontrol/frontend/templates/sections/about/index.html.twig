@@ -1,0 +1,39 @@
+{% set fixed = {"fixed": {"width":950, "height":640}} %}
+<div class="section section-about">
+  <div class="container-fluid about-container">
+    <div class="row about-row">
+      <div class="col-md-6 col-sm-12 about-col about-info">
+        <div class="container info-container">
+          <div class="row info-row">
+            <div class="col-10 info-col">
+              <div class="section-heading info-heading">
+                <div class="heading-subtitle info-subtitle">
+                  <span>Passionate About Perfection</span>
+                </div>
+                <div class="heading-title info-title">
+                  <span class="heading">OUR EXPERTS COACHES</span>
+                </div>
+              </div>
+              <div class="info-text">
+                <p>Keep away from people who try to belittle your ambitions. Small people always do that but the really great. Friendly neighbour there that's where we meet Sesame street praese voluptatum.</p>
+              </div>
+              <div class="info-button">
+                <a class="btn" href="#">Button Text</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 about-col about-media">
+        <a href="https://www.youtube-nocookie.com/embed/JsS6MujjOG4" class="-magnific -iframe">
+          <div class="media-holder hover-effect-1">
+            <div class="media-holder-icon">
+              <i class="fas fa-play"></i>
+            </div>
+            <img src="{{ asset('/build/frontend/images/1.jpg') | imagine_filter('fixed_about') }}" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

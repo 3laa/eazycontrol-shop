@@ -1,0 +1,48 @@
+.section-facts {
+
+}
+
+.section-facts .facts-container {
+
+}
+
+.section-facts .facts-container .facts-row {
+  align-items: stretch;
+}
+
+.section-facts .facts-container .facts-row .facts-col {
+  &:nth-child(1) {
+    background: darken($alpha, 5);
+  }
+  &:nth-child(2) {
+    background: $alpha;
+  }
+  &:nth-child(3) {
+    background: lighten($alpha, 5);
+  }
+  &:nth-child(4) {
+    background: lighten($alpha, 10);
+  }
+}
+
+.section-facts .facts-container .facts-row .facts-col .fact {
+  color: $white;
+  text-align: center;
+  padding: 50px;
+}
+
+.section-facts .facts-container .facts-row .facts-col .fact .fact-number {
+  margin-bottom: 20px;
+
+  & span {
+    color: $white;
+    font-size: 42px;
+  }
+}
+
+.section-facts .facts-container .facts-row .facts-col .fact .fact-title {
+  & span {
+    color: $white;
+    font-size: $font-size-h4;
+  }
+}

@@ -2,18 +2,28 @@
 
 }
 
+.-swiper .swiper {
+  position: relative;
+}
+
 .-swiper .swiper .swiper-container .swiper-wrapper {
   align-items: stretch;
+  height: auto;
 }
 
 .-swiper .swiper .swiper-container .swiper-wrapper .swiper-slide {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: auto;
 }
 
 .-swiper .swiper .swiper-button {
-
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
 }
 
 .-swiper .swiper .swiper-button.swiper-button-next {

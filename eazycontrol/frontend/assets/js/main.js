@@ -40,7 +40,40 @@ function initSwiper() {
     });
 }
 
+function initMagnific() {
+    $('.-magnific').magnificPopup({
+        callbacks: {
+            elementParse: function(item) {
+                if($(item.el).hasClass('-iframe')) {
+                    item.type = 'iframe';
+                } else {
+                    item.type = 'image';
+                }
+            }
+        }
+    });
+
+    $('.-magnific-gallery').each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: 'a.-magnific-link', // the selector for gallery item
+            gallery: {
+                enabled:true
+            },
+            callbacks: {
+                elementParse: function(item) {
+                    if($(item.el).hasClass('-iframe')) {
+                        item.type = 'iframe';
+                    } else {
+                        item.type = 'image';
+                    }
+                }
+            }
+        });
+    });
+}
+
 $(document).ready(function () {
     initWOW();
     initSwiper();
+    initMagnific();
 });

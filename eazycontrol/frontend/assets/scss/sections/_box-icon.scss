@@ -1,0 +1,77 @@
+.section-box-icon {
+  padding: 100px 0;
+  border-bottom: 1px solid $border;
+}
+
+.section-box-icon .box-icon-container {
+
+}
+
+.section-box-icon .box-icon-container .box-icon-row {
+  margin-bottom: -50px;
+  align-items: stretch;
+}
+
+.section-box-icon .box-icon-container .box-icon-row .box-icon-col {
+  margin-bottom: 50px;
+}
+
+.section-box-icon .box-icon-container .box-icon-row .box-icon-col .box-icon {
+  padding: 0 50px;
+  text-align: center;
+  height: 100%;
+}
+
+.section-box-icon .box-icon-container .box-icon-row .box-icon-col .box-icon .box-icon-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  background: $white;
+  color: $text;
+  border: 1px solid rgba($border, 0.5);
+  font-size: 28px;
+  box-shadow: 0 0 2px 5px rgb($border, .4);
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  transition: all .35s ease-in-out;
+}
+
+.section-box-icon .box-icon-container .box-icon-row .box-icon-col:hover .box-icon .box-icon-icon {
+  background: $alpha;
+  color: $white;
+  box-shadow: 0 0 2px 5px rgb($border, 0);
+}
+
+.section-box-icon .box-icon-container .box-icon-row .box-icon-col .box-icon .box-icon-title {
+  margin-bottom: 25px;
+
+  &:after {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: $black;
+    display: inline-block;
+    margin-top: 10px;
+    transition: all .35s ease-in-out;
+  }
+
+  & span {
+    font-size: $font-size-h3;
+    color: $black;
+    transition: all .35s ease-in-out;
+  }
+}
+
+.section-box-icon .box-icon-container .box-icon-row .box-icon-col:hover .box-icon .box-icon-title {
+  &:after {
+    background: $alpha;
+  }
+
+  & span {
+    color: $alpha;
+  }
+}

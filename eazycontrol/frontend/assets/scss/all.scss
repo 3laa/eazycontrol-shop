@@ -9,6 +9,14 @@
 @import "base/swiper";
 @import "base/form";
 @import "base/modifier";
+@import "base/media-holder";
 
 // Sections
+@import "sections/heading";
 @import "sections/slider";
+@import "sections/box-icon";
+@import "sections/box-media";
+@import "sections/facts";
+@import "sections/about";
+@import "sections/testimonial";
+@import "sections/logos";

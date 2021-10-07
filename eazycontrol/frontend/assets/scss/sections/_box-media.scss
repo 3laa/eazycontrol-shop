@@ -1,0 +1,52 @@
+.section-box-media {
+  padding: 100px 0;
+  border-bottom: 1px solid $border;
+}
+
+.section-box-media .box-media-container {
+
+}
+
+.section-box-media .box-media-container .box-media-row {
+  margin-bottom: -50px;
+  align-items: stretch;
+}
+
+.section-box-media .box-media-container .box-media-row .box-media-col {
+  margin-bottom: 50px;
+}
+
+.section-box-media .box-media-container .box-media-row .box-media-col .box-media {
+
+}
+
+.section-box-media .box-media-container .box-media-row .box-media-col .box-media .box-media-media {
+
+}
+
+.section-box-media .box-media-container .box-media-row .box-media-col .box-media .box-media-info {
+  text-align: center;
+  padding: 50px 50px 0px 50px;
+}
+
+.section-box-media .box-media-container .box-media-row .box-media-col .box-media .box-media-info .info-title {
+  margin-bottom: 20px;
+
+  & span {
+    color: $black;
+    font-weight: $font-weight-500;
+    font-size: $font-size-h2;
+  }
+}
+
+.section-box-media .box-media-container .box-media-row .box-media-col:hover .box-media .box-media-info .info-title {
+  & span {
+    color: $alpha;
+  }
+}
+
+.section-box-media .box-media-container .box-media-row .box-media-col .box-media .box-media-info .info-text {
+  & p {
+    font-size: $font-size-h6;
+  }
+}

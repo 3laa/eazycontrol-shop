@@ -1,0 +1,57 @@
+.section-about {
+  background: $background;
+  & + .section-about .about-container .about-row {
+    flex-direction: row-reverse;
+  }
+}
+
+.section-about .about-container {
+
+}
+
+.section-about .about-container .about-row {
+  align-items: stretch;
+}
+
+.section-about .about-container .about-row .about-col {
+  padding: 0;
+}
+
+
+.section-about .about-container .about-row .about-col.about-info {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-about .about-container .about-row .about-col.about-info .info-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-about .about-container .about-row .about-col.about-info .info-container .info-row {
+  width: 100%;
+  justify-content: center;
+}
+
+.section-about .about-container .about-row .about-col.about-info .info-container .info-row .info-col {
+  text-align: center;
+}
+
+
+.section-about .about-container .about-row .about-col.about-info .info-container .info-row .info-col .section-heading.info-heading {
+  margin-bottom: 25px;
+}
+
+.section-about .about-container .about-row .about-col.about-info .info-container .info-row .info-col .info-text {
+  margin-bottom: 30px;
+
+  & p {
+    font-size: $font-size-h6;
+  }
+}
+
+.section-about .about-container .about-row .about-col.about-media {
+
+}

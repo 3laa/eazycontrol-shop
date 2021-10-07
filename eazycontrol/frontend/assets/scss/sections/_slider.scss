@@ -2,8 +2,12 @@
 
 }
 
+.section-slider .swiper-wrapper {
+  height: auto;
+}
+
 .section-slider .swiper-slide {
-  padding: 100px 0;
+  padding: 200px 0;
   position: relative;
 }
 
@@ -20,10 +24,10 @@
 
 .section-slider .swiper-slide .slide-container {
   z-index: 100;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .section-slider .swiper-slide .slide-container .slide-row {

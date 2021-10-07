@@ -3,8 +3,8 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
 
-        <div class="swiper-slide" style="background-image: url('/upload/images/about/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg')">
-          <div class="slide-overlay" style="opacity: .25"></div>
+        <div class="swiper-slide" style="background-image: url('{{ asset('/build/frontend/images/1.jpg') | imagine_filter('fixed_slider') }}')">
+          <div class="slide-overlay" style="opacity: .5"></div>
           <div class="container slide-container">
             <div class="row slide-row">
               <div class="col-xl-6 col-10 slide-col">
@@ -15,14 +15,14 @@
                   <p>The Best Multipurpose One Page Template in Market</p>
                 </div>
                 <div class="slide-button">
-                  <a class="btn btn-primary" href="#">Button Text</a>
+                  <a class="btn" href="#">Button Text</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="swiper-slide" style="background-image: url('/upload/images/about/umbrella-1588167_1280.jpg')">
+        <div class="swiper-slide" style="background-image: url('{{ asset('/build/frontend/images/2.jpg') | imagine_filter('fixed_slider') }}')">
           <div class="slide-overlay" style="opacity: .5"></div>
           <div class="container slide-container">
             <div class="row slide-row">
@@ -41,7 +41,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide" style="background-image: url('/upload/images/about/campaign-creators-gMsnXqILjp4-unsplash.jpg')">
+        <div class="swiper-slide" style="background-image: url('{{ asset('/build/frontend/images/3.jpg') | imagine_filter('fixed_slider') }}')">
           <div class="slide-overlay" style="opacity: .5"></div>
           <div class="container slide-container">
             <div class="row slide-row">
@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        <div class="swiper-slide" style="background-image: url('/upload/images/about/jeremy-zero-oviIAOPmM4k-unsplash.jpg')">
+        <div class="swiper-slide" style="background-image: url('{{ asset('/build/frontend/images/4.jpg') | imagine_filter('fixed_slider') }}')">
           <div class="slide-overlay" style="opacity: .5"></div>
           <div class="container slide-container">
             <div class="row slide-row">
