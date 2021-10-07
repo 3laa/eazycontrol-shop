@@ -55,6 +55,7 @@ class SectionController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->entityManager->persist($section);
             $this->entityManager->flush();
+            $this->addFlash('success', 'Section has been successfully created.');
             return $this->redirectToRoute('backend_website_section_edit', ['id' => $section->getId()]);
         }
 
@@ -79,6 +80,7 @@ class SectionController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->entityManager->flush();
+            $this->addFlash('success', 'Section has been successfully updated.');
         }
 
         return $this->render('@backend/website/section/form.html.twig', [
@@ -98,6 +100,7 @@ class SectionController extends AbstractController
     {
         $this->entityManager->remove($section);
         $this->entityManager->flush();
+        $this->addFlash('success', 'Section has been successfully deleted.');
         return $this->redirectToRoute('backend_page_index', ['id' => $section->getPage()->getId()]);
     }
 

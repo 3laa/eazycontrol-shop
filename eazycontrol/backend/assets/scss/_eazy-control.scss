@@ -185,3 +185,15 @@
   }
 }
 
+.alert-error {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+.alert-error .alert-link {
+  color: #6a1a21;
+}
+
+.alert-heading {
+  text-transform: capitalize;
+}

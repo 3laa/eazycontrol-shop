@@ -1,0 +1,119 @@
+html {
+  line-height: $body-line-height;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $body-font-family;
+  color: $text;
+  font-weight: $font-weight-300;
+  font-size: $font-size-base;
+  line-height: $body-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant-ligatures: no-common-ligatures;
+  -moz-font-feature-settings: "liga" 0, "clig" 0;
+  -webkit-font-feature-settings: "liga" 0, "clig" 0;
+  font-feature-settings: "liga" 0, "clig" 0;
+  text-align: left;
+  letter-spacing: $body-letter-spacing;
+  word-spacing: $body-word-spacing;
+  background-color: $white;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+.heading,
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6,
+.h7 {
+  font-family: $headline-font-family;
+  font-weight: $font-weight-700;
+  line-height: $headline-line-height;
+  margin: 0;
+  letter-spacing: $headline-letter-spacing;
+  word-spacing: $headline-word-spacing;
+  padding: 0;
+  display: block;
+  color: $alpha;
+}
+
+h1, .h1 {
+  font-size: $font-size-h1;
+}
+
+h2, .h2 {
+  font-size: $font-size-h2;
+}
+
+h3, .h3 {
+  font-size: $font-size-h3;
+}
+
+h4, .h4 {
+  font-size: $font-size-h4;
+}
+
+h5, .h5 {
+  font-size: $font-size-h5;
+}
+
+h6, .h6 {
+  font-size: $font-size-h6;
+}
+
+.h7 {
+  font-size: $font-size-base;
+}
+
+p, .p {
+  font-family: $body-font-family;
+  font-weight: $font-weight-300;
+  line-height: $body-line-height;
+  margin-bottom: 10px;
+  margin-top: 0;
+  letter-spacing: $body-letter-spacing;
+  word-spacing: $body-word-spacing;
+  color: $text;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+b, .b
+strong, .strong,
+.bold {
+  font-weight: $font-weight-600;
+}
+
+small, .small {
+  font-size: $font-size-base-small;
+}
+
+a {
+  font-size: $font-size-base;
+  color: $text;
+  text-decoration: none;
+  background-color: transparent;
+  transition: color .35s ease-in-out;
+
+  &.-active,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $alpha;
+    text-decoration: none;
+  }
+}

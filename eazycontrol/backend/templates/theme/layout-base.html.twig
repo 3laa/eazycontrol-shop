@@ -53,5 +53,7 @@
 <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 <script src="{{ asset('build/backend/js/main.js') }}"></script>
+
+{{ include('@backend/theme/flashes.html.twig') }}
 </body>
 </html>

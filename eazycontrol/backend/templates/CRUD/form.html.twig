@@ -16,7 +16,6 @@
     <div class="card">
       <h3 class="card-header">{{ breadcrumb }} - {% if entity.name %}{{ entity.name }}{% elseif entity.title['default'] is defined %}{{ entity.title['default'] }}{% endif %}</h3>
       <div class="card-body">
-
         {{ form_start(form) }}
         {{ form_widget(form) }}
         {{ include('@backend/theme/form-submit.html.twig') }}

@@ -1,0 +1,13 @@
+<script>
+  {% for key, flashes in app.flashes %}
+  {% for flash in flashes %}
+  $.toast({
+      heading: '{{ key }}',
+      text: '{{ flash }}',
+      icon: '{{ key }}',
+      position: 'top-right',
+      hideAfter: 7500
+  })
+  {% endfor %}
+  {% endfor %}
+</script>

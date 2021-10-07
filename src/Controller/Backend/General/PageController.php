@@ -88,6 +88,7 @@ class PageController extends AbstractController
             $this->entityManager->persist($newPage);
             $this->entityManager->persist($page);
             $this->entityManager->flush();
+            $this->addFlash('success', 'Page has been successfully created.');
             return $this->redirectToRoute('backend_page_edit', ['id' => $newPage->getId()]);
         }
 
@@ -111,6 +112,7 @@ class PageController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->entityManager->flush();
+            $this->addFlash('success', 'Page has been successfully updated.');
         }
 
         return $this->render('@backend/CRUD/form.html.twig', [
@@ -129,6 +131,7 @@ class PageController extends AbstractController
     {
         $this->entityManager->remove($page);
         $this->entityManager->flush();
+        $this->addFlash('success', 'Page has been successfully deleted.');
         return $this->redirectToRoute('backend_main_index');
     }
 

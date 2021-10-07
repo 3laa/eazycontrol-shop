@@ -1,0 +1,43 @@
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  color: $white;
+  background-color: $alpha;
+  border: 1px solid $alpha;
+  padding: 9px 34px;
+  font-size: $font-size-h6;
+  font-family: $headline-font-family;
+  border-radius: 50px;
+  transition: all .35s ease-in-out;
+
+  &:focus,
+  &:visited,
+  &:hover {
+    color: $alpha;
+    background-color: transparent;
+    border: 1px solid $alpha;
+    box-shadow: none;
+  }
+
+  &:focus,
+  &:visited {
+    color: $white;
+    background-color: $alpha;
+    border: 1px solid $alpha;
+  }
+
+  &.btn-circle {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+}

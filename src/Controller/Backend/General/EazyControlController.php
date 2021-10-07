@@ -39,6 +39,7 @@ class EazyControlController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()) {
             $this->entityManager->flush();
+            $this->addFlash('success', 'EazyControl has been successfully updated.');
         }
 
         return $this->render('@backend/CRUD/form.html.twig', [
