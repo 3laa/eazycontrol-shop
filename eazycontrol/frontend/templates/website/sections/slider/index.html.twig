@@ -1,0 +1,39 @@
+{% set activeContents = section.contents|activeContents(app.request.locale) %}
+<section class="section section-slider -swiper">
+  <div class="swiper">
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for key,content in activeContents %}
+        <div class="swiper-slide" style="background-image: url('{{ asset(content.media['image']) | imagine_filter('fixed_slider') }}')">
+          <div class="slide-overlay" style="opacity: .{{ content.viewOptions['opacity'] }}"></div>
+          <div class="container slide-container">
+            <div class="row slide-row">
+              <div class="col-xl-6 col-10 slide-col">
+                <div class="slide-title">
+                  <span class="heading">{{ content.title[app.request.locale] }}</span>
+                </div>
+                <div class="slide-text">
+                  <p>{{ content.subtitle[app.request.locale] }}</p>
+                </div>
+                <div class="slide-button">
+                  {{ include('@frontend/theme/particles/link.html.twig', {link: content.link}) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if activeContents|length > 1 %}
+      <div class="swiper-button swiper-button-next btn btn-circle">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="swiper-button swiper-button-prev btn btn-circle">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,6 @@
+{% if class is not defined %}{% set class = 'btn' %}{% endif %}
+{% if link[app.request.locale] is defined %}
+  {% if link[app.request.locale]['url'] %}
+    <a class="{{ class }}" href="{{ link[app.request.locale]['url'] }}" target="{{ link[app.request.locale]['target'] }}">{{ link[app.request.locale]['text'] }}</a>
+  {% endif %}
+{% endif %}

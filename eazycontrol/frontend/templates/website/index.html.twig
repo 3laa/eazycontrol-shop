@@ -1,0 +1,9 @@
+{% extends "@frontend/theme/layout/default.html.twig" %}
+{% block body %}
+  {% set activeSections = page.sections|activeSections(app.request.locale) %}
+  {% for section in activeSections %}
+    {% if section.title[app.request.locale] is defined %}
+      {{ include(section.category.frontend, {section:  section}) }}
+    {% endif %}
+  {% endfor %}
+{% endblock %}

@@ -21,6 +21,8 @@ class SliderSectionType extends AbstractType
                 'type' => CheckboxType::class
             ])
             ->add('title', PropertyByLanguageType::class)
+            ->add('media', MediaType::class, ['type'=>['image', 'youtube', 'website']])
+            ->add('viewOptions', ViewOptionsType::class, ['type'=>['heading-text-align', 'content-text-align', 'background', 'container']])
             ->add('contents', CollectionType::class,
                 [
                     'entry_type' => SliderContentType::class,

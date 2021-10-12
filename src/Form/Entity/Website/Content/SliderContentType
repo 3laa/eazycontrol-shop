@@ -20,9 +20,10 @@ class SliderContentType extends AbstractType
             ->add('isActive', PropertyByLanguageType::class, ['type' => CheckboxType::class])
             ->add('title', PropertyByLanguageType::class)
             ->add('subtitle', PropertyByLanguageType::class)
+            ->add('text', PropertyByLanguageType::class, ['type'=>TextareaType::class])
             ->add('link', PropertyByLanguageType::class, ['type'=>LinkType::class])
             ->add('media', MediaType::class)
-            ->add('viewOptions', ViewOptionsType::class, ['type'=>['opacity']]);
+            ->add('viewOptions', ViewOptionsType::class, ['type'=>['slide-direction', 'opacity', 'theme']]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

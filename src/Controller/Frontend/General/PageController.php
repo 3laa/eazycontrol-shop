@@ -3,6 +3,7 @@
 namespace App\Controller\Frontend\General;
 
 use App\Entity\Page;
+use App\Service\FrontendService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,12 +15,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class PageController extends AbstractController
 {
     /**
+     * @param FrontendService $frontend
      * @return Response
      * @Route("/", name="index")
      */
-    public function index(): Response
+    public function index(FrontendService $frontend): Response
     {
-        return $this->render("@frontend/index.html.twig");
+        $page = $frontend->getEazyControl()->getRoot();
+        return $this->render("@frontend/". $page->getType() ."/index.html.twig", ['page'=>$page]);
     }
 
     /**

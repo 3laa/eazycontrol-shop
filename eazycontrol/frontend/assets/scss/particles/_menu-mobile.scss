@@ -32,12 +32,12 @@
   & .menu-wrapper ul.menu li.menu-entry a.menu-link {
     font-weight: $font-weight-500;
     font-size: $font-size-h5;
-    color: $black;
+    color: $white;
     font-family: $headline-font-family;
 
     &.-is-active,
     &:hover {
-      color: $alpha;
+      color: $black;
     }
   }
 
