@@ -16,13 +16,15 @@
   border-radius: 50px;
   transition: all .35s ease-in-out;
 
-  &:focus,
-  &:visited,
   &:hover {
     color: $alpha;
     background-color: transparent;
     border: 1px solid $alpha;
-    box-shadow: none;
+    box-shadow: none !important;
+
+    & * {
+      color: $alpha;
+    }
   }
 
   &:focus,
@@ -30,6 +32,11 @@
     color: $white;
     background-color: $alpha;
     border: 1px solid $alpha;
+    box-shadow: none !important;
+
+    & * {
+      color: $white;
+    }
   }
 
   &.btn-circle {

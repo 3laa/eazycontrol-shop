@@ -104,7 +104,7 @@ small, .small {
 
 a {
   font-size: $font-size-base;
-  color: $text;
+  color: $beta;
   text-decoration: none;
   background-color: transparent;
   transition: color .35s ease-in-out;
@@ -113,7 +113,7 @@ a {
   &:hover,
   &:active,
   &:focus {
-    color: $alpha;
+    color: $beta;
     text-decoration: none;
   }
 }

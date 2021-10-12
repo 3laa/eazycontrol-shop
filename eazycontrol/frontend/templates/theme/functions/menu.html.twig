@@ -1,0 +1,37 @@
+{% if menu is not defined %}{% set menu = frontend.eazyControl.website %}{% endif %}
+{% if locale is not defined %}{% set locale = app.request.locale %}{% endif %}
+{% if mobile is not defined %}{% set mobile = false %}{% endif %}
+{% if level is not defined %}{% set level = 1 %}{% endif %}
+{% if limit is not defined %}{% set limit = 4 %}{% endif %}
+{% if menu.pages is defined %}
+{% set activePages = menu.pages|activePages(locale) %}
+
+{% if level <= limit %}
+<div class="menu-wrapper -level-{{ level }}">
+    <ul class="menu -level-{{ level }}">
+        {% for page in activePages %}
+            {% set pageLink = page|getPageLink(locale) %}
+            {% set isActive = '' %}
+            {% if page in frontend.pagesBreadcrumb %}{% set isActive = '-is-active' %}{% endif %}
+            {% set subActivePages = page.pages|activePages(locale) %}
+            <li data-id="{{ page.id }}" class="menu-entry -level-{{ level }} {{ isActive }} {% if subActivePages|length %}-has-sub{% endif %} {% if isActive!='' %}-is-collapse-menu{% endif %}">
+                <a href="{{ pageLink['link'] }}" target="{{ pageLink['target'] }}"  class="menu-link -level-{{ level }} {{ isActive }} {% if subActivePages|length %}-has-sub{% endif %}">
+                    <div class="link -level-{{ level }} {{ isActive }} {% if subActivePages|length %}-has-sub{% endif %}">
+                      {% if page.media['icon'] is defined %}
+                        {% if page.media['icon'] %}
+                          <i class="link-icon {{ page.media['icon'] }} -level-{{ level }} {{ isActive }}"></i>
+                        {% endif %}
+                      {% endif %}
+                      <span class="link-text -level-{{ level }} {{ isActive }}">{{ page.title[locale] }}</span>
+                    </div>
+                    <i data-id="{{ page.id }}" class="link-action -level-{{ level }} {{ isActive }} {% if isActive!='' %}-is-collapse{% endif %} {% if subActivePages|length %}-has-sub{% endif %}"></i>
+                </a>
+                {% if subActivePages|length %}
+                    {{ include('@frontend/_theme/functions/menu.html.twig', {menu:  page, level: level+1}) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endif %}

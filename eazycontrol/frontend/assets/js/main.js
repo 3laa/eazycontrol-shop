@@ -72,8 +72,32 @@ function initMagnific() {
     });
 }
 
+function iniHeadroom()
+{
+    const headroom  = new Headroom(document.querySelector("body"));
+    headroom.init();
+}
+
+function initAside()
+{
+    $(document).on('click', '[data-aside]', function (event) {
+        event.preventDefault();
+        $('#' + $(this).data('aside')).toggleClass('-open');
+        $('body').toggleClass('noscroll');
+    })
+
+    $(document).on('click', 'aside.aside .-close', function (event) {
+        event.preventDefault();
+        $(this).parents('aside.aside').removeClass('-open')
+        $('body').removeClass('noscroll');
+    })
+}
+
+
 $(document).ready(function () {
     initWOW();
+    initAside()
     initSwiper();
+    iniHeadroom();
     initMagnific();
 });

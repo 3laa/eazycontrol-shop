@@ -1,0 +1,39 @@
+footer.footer {
+  padding: 50px 0;
+  background: $dark;
+  text-align: center;
+  font-size: $font-size-base-small;
+
+  & a {
+    font-size: $font-size-base-small;
+    color: $white;
+
+    &:hover {
+      color: $alpha;
+    }
+  }
+}
+
+footer.footer .footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: -20px;
+
+  & a {
+    margin-bottom: 20px;
+
+    & + a {
+      margin-left: 20px;
+    }
+  }
+}
+
+footer.footer .footer-copyrights {
+  margin-top: 25px;
+
+  & a {
+    color: $alpha;
+  }
+}

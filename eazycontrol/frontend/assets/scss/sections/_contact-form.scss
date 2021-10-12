@@ -1,0 +1,31 @@
+.section-contact-form {
+  padding: 50px 0;
+  @include breakpoint($breakpoints-md) {
+    padding: 100px 0;
+  }
+  border-bottom: 1px solid $border;
+}
+
+.section-contact-form .contact-form-row {
+  margin-bottom: -50px;
+}
+
+.section-contact-form .contact-form-row .contact-form-col {
+  margin-bottom: 50px;
+}
+
+.section-contact-form .col-info .info-text {
+  margin-bottom: 25px;
+}
+
+.section-contact-form .col-info .info-list {
+  margin-bottom: 25px;
+
+  & ul li + li {
+    margin-top: 10px;
+  }
+}
+
+.section-contact-form .col-info .info-actions {
+
+}

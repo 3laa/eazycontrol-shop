@@ -1,0 +1,49 @@
+<section class="section section-contact-form">
+  {{ include('@frontend/theme/particles/heading.html.twig') }}
+  <div class="container contact-form-container">
+    <div class="row contact-form-row">
+      <div class="col-md-6 contact-form-col col-info">
+        <div class="info-text">
+          <p>
+            IABC principal office currently based in Lebanon. IABC has a regional representative office for North Africa (based in Libya) and for the Gulf (based in UAE), as well as country offices currently in KSA, Tunis, Iraq, Turkey and Oman.
+          </p>
+        </div>
+        <div class="info-list">
+          <ul>
+            <li><b>Address:</b> Tayyouneh Center Bldg, 9th Floor, Tayyouneh, Beirut, Lebanon</li>
+            <li><b>Telephone:</b> + 961 01 382942</li>
+            <li><b>Website:</b> <a href="https://ia-bc.com/">https://ia-bc.com/</a> </li>
+            <li><b>Mobile:</b> + 961 70 618278</li>
+            <li><b>Fax:</b> + 961 01 382942</li>
+          </ul>
+        </div>
+        <div class="info-actions">
+          <a href="#" class="btn btn-circle"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="btn btn-circle"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="btn btn-circle"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="btn btn-circle"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="btn btn-circle"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+      <div class="col-md-6 contact-form-col col-form">
+        <form class="form">
+          <div class="row form-row">
+            <div class="col-md-6 form-col">
+              <input type="text" class="form-control" name="name" placeholder="Your Full Name" required="required">
+            </div>
+            <div class="col-md-6 form-col">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="required">
+            </div>
+            <div class="col-12 form-col">
+              <textarea class="form-control" name="message" placeholder="Your Message:"></textarea>
+            </div>
+            <div class="col-12 form-col">
+              <button type="submit" class="btn">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

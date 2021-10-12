@@ -11,6 +11,15 @@
 @import "base/modifier";
 @import "base/media-holder";
 
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/aside";
+
+// Particles
+@import "particles/menu-header";
+@import "particles/menu-mobile";
+
 // Sections
 @import "sections/heading";
 @import "sections/slider";
@@ -20,3 +29,7 @@
 @import "sections/about";
 @import "sections/testimonial";
 @import "sections/logos";
+@import "sections/gallery-media";
+@import "sections/map";
+@import "sections/contact-form";
+@import "sections/blank";

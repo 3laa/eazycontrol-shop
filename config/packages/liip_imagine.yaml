@@ -22,10 +22,22 @@ liip_imagine:
                     height: 480
 
         relative_resize_logos:
+            quality: 75
             filters:
                 relative_resize:
                     heighten: 100
 
+        relative_resize_gallery_media:
+            quality: 75
+            filters:
+                relative_resize:
+                    widen: 1000
+
+        relative_resize_blank:
+            quality: 75
+            filters:
+                relative_resize:
+                    widen: 850
 
         thumbnail_media_box:
             quality: 75
@@ -35,6 +47,13 @@ liip_imagine:
                     mode: outbound
                     allow_upscale: true
 
+        thumbnail_gallery_media:
+            quality: 75
+            filters:
+                thumbnail:
+                    size: [250, 250]
+                    mode: outbound
+                    allow_upscale: true
 
         thumbnail:
             quality: 75

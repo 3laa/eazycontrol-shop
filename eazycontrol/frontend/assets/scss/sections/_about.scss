@@ -19,7 +19,10 @@
 
 
 .section-about .about-container .about-row .about-col.about-info {
-  padding: 100px 0;
+  padding: 50px 0;
+  @include breakpoint($breakpoints-md) {
+    padding: 100px 0;
+  }
   position: relative;
 }
 
@@ -54,4 +57,15 @@
 
 .section-about .about-container .about-row .about-col.about-media {
 
+}
+
+.section-about .about-container .about-row .about-col.about-media .media {
+  width: 100%;
+  height: 100%;
+
+  & .media-holder,
+  & img {
+    width: 100%;
+    height: 100%;
+  }
 }

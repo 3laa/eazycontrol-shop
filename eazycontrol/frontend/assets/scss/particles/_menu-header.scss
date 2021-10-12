@@ -1,0 +1,153 @@
+// general
+// level-1
+// level 2
+// up leve 2 loop to 10
+
+.header-menu {
+  // general
+  & .menu-wrapper {
+
+  }
+
+  & .menu-wrapper ul.menu {
+
+  }
+
+  & .menu-wrapper ul.menu li.menu-entry {
+    position: relative;
+  }
+
+  & .menu-wrapper ul.menu li.menu-entry a.menu-link {
+    font-weight: $font-weight-500;
+    font-size: $font-size-h6;
+    color: $white;
+    font-family: $headline-font-family;
+
+    &:hover {
+      color: $alpha;
+    }
+  }
+
+  & .menu-wrapper ul.menu li.menu-entry a.menu-link .link {
+
+  }
+
+  & .menu-wrapper ul.menu li.menu-entry a.menu-link .link .link-text {
+
+  }
+
+  & .menu-wrapper ul.menu li.menu-entry a.menu-link .link .link-icon {
+
+  }
+
+  & .menu-wrapper ul.menu li.menu-entry a.menu-link .link-action {
+
+  }
+
+  // level-1
+  & .menu-wrapper.-level-1 {
+    height: 100%;
+  }
+
+  & .menu-wrapper.-level-1 ul.menu.-level-1 {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+
+  & .menu-wrapper.-level-1 ul.menu.-level-1 li.menu-entry.-level-1 {
+    height: 100%;
+
+    & + li.menu-entry.-level-1 {
+      margin-left: 30px;
+    }
+  }
+
+  & .menu-wrapper.-level-1 ul.menu.-level-1 li.menu-entry.-level-1 a.menu-link.-level-1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: 20px;
+      width: 100%;
+      height: 2px;
+      background: $alpha;
+      opacity: 0;
+      transition: all .35s ease-in-out;
+    }
+
+    &.-is-active,
+    &:hover {
+      color: $alpha;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  & .menu-wrapper.-level-1 ul.menu.-level-1 li.menu-entry.-level-1 a.menu-link.-level-1 .link.-level-1 {
+
+  }
+
+  & .menu-wrapper.-level-1 ul.menu.-level-1 li.menu-entry.-level-1 a.menu-link.-level-1 .link.-level-1 .link-text.-level-1 {
+
+  }
+
+  & .menu-wrapper.-level-1 ul.menu.-level-1 li.menu-entry.-level-1 a.menu-link.-level-1 .link.-level-1 .link-icon.-level-1 {
+
+  }
+
+  & .menu-wrapper.-level-1 ul.menu.-level-1 li.menu-entry.-level-1 a.menu-link.-level-1 .link-action.-level-1 {
+
+  }
+
+  // level 2
+  & .menu-wrapper.-level-2 {
+
+  }
+
+  // up leve 2 loop to 10
+  @for $i from 2 through 10 {
+    & .menu-wrapper.-level-#{$i} {
+
+    }
+
+    & .menu-wrapper.-level-#{$i} ul.menu.-level-#{$i} {
+
+    }
+
+    & .menu-wrapper.-level-#{$i} ul.menu.-level-#{$i} li.menu-entry.-level-#{$i} {
+
+    }
+
+    & .menu-wrapper.-level-#{$i} ul.menu.-level-#{$i} li.menu-entry.-level-#{$i} a.menu-link.-level-#{$i} {
+
+    }
+
+    & .menu-wrapper.-level-#{$i} ul.menu.-level-#{$i} li.menu-entry.-level-#{$i} a.menu-link.-level-#{$i} .link.-level-#{$i} {
+
+    }
+
+    & .menu-wrapper.-level-#{$i} ul.menu.-level-#{$i} li.menu-entry.-level-#{$i} a.menu-link.-level-#{$i} .link.-level-#{$i} .link-text.-level-#{$i} {
+
+    }
+
+    & .menu-wrapper.-level-#{$i} ul.menu.-level-#{$i} li.menu-entry.-level-#{$i} a.menu-link.-level-#{$i} .link.-level-#{$i} .link-icon.-level-#{$i} {
+
+    }
+
+    & .menu-wrapper.-level-#{$i} ul.menu.-level-#{$i} li.menu-entry.-level-#{$i} a.menu-link.-level-#{$i} .link-action.-level-#{$i} {
+
+    }
+  }
+}
+
+

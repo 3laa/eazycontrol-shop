@@ -1,0 +1,37 @@
+<header class="header">
+  <div class="container header-">
+    <div class="header-row">
+      <div class="header-menu-toggle">
+        <div class="toggle" data-aside="mobile-menu-aside">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </div>
+      </div>
+      <div class="header-logo">
+        <a href="{{ path('frontend_page_index') }}">
+          <img src="{{ asset('/build/frontend/images/logo.png') }}" />
+        </a>
+      </div>
+      <div class="header-menu">
+        {{ include('@frontend/theme/functions/menu.html.twig') }}
+      </div>
+    </div>
+  </div>
+</header>
+<aside class="aside" id="mobile-menu-aside">
+  <div class="aside-panel">
+    <div class="panel-top">
+
+    </div>
+    <div class="panel-center">
+      <div class="mobile-menu">
+        {{ include('@frontend/theme/functions/menu.html.twig') }}
+      </div>
+    </div>
+    <div class="panel-bottom">
+
+    </div>
+  </div>
+  <div class="aside-empty -close"></div>
+</aside>

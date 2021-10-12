@@ -1,0 +1,11 @@
+.section-blank {
+  padding: 50px 0;
+  @include breakpoint($breakpoints-md) {
+    padding: 100px 0;
+  }
+  border-bottom: 1px solid $border;
+}
+
+.section-blank .blank-media {
+  margin-bottom: 50px;
+}

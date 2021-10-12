@@ -1,3 +1,64 @@
 .form-control {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  font-size: $font-size-base;
+  padding: 10px 20px;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 2px rgba($border, 1);
+  border-radius: 3px;
+  font-family: $headline-font-family;
+  font-weight: $font-weight-400;
+  border: 0 none;
+  outline: 0 none;
+  height: 44px;
+  background: $white;
+  transition: border-color .35s ease-in-out,box-shadow .35s ease-in-out;
+  outline: none !important;
 
+  &.-select {
+    padding: 10px 20px;
+    min-width: 200px;
+
+    & select {
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+      cursor: pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left;
+      border: 0 none;
+      line-height: 1;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+  }
+
+  &:focus {
+    color: $black;
+    background: $white;
+    border-color: rgba($black, 0.75);
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba($alpha, 1);
+  }
+}
+
+textarea {
+  &.form-control {
+    min-height: 150px;
+  }
+}
+
+.form {
+
+}
+
+.form .form-row {
+  margin-bottom: -25px;
+}
+
+.form .form-row .form-col {
+  margin-bottom: 25px;
 }

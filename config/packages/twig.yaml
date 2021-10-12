@@ -6,6 +6,7 @@ twig:
         'eazycontrol/frontend/templates': 'frontend'
     globals:
         backend: '@App\Service\BackendService'
+        frontend: '@App\Service\FrontendService'
 
 when@test:
     twig:

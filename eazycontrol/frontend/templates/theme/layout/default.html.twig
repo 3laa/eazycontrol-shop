@@ -1,7 +1,11 @@
 <html {% if app.request.locale == 'ar' %} class="-rtl" lang="ar" dir="rtl"{% else %}lang="en" dir="ltr"{% endif %}>
 {{ include('@frontend/theme/include/head.html.twig') }}
 <body>
-{% block body %}{% endblock %}
+<div class="page">
+  {{ include('@frontend/theme/components/header/index.html.twig') }}
+  {% block body %}{% endblock %}
+  {{ include('@frontend/theme/components/footer.html.twig') }}
+</div>
 {{ include('@frontend/theme/include/foot.twig') }}
 </body>
 </html>

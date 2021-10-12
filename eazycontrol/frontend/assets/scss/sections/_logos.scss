@@ -1,5 +1,8 @@
 .section-logos {
-  padding: 100px 0;
+  padding: 50px 0;
+  @include breakpoint($breakpoints-md) {
+    padding: 100px 0;
+  }
   border-bottom: 1px solid $border;
 }
 
@@ -15,6 +18,12 @@
 
 .section-logos .logos-container .logos-swiper .logos-swiper-container .logos-swiper-wrapper .logo-swiper-slide .logo {
   padding: 0 20px;
+  transform: scale(1);
+  transition: transform .35s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .section-logos .logos-container .logos-swiper .logos-swiper-container .logos-swiper-wrapper .logo-swiper-slide .logo img {
