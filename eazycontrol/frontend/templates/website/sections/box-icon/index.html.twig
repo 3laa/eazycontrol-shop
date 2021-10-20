@@ -4,7 +4,7 @@
   <div class="container box-icon-container">
     <div class="row box-icon-row">
       {% for key,content in activeContents %}
-      <{% if content.link[app.request.locale]['url'] %}a href="{{ content.link[app.request.locale]['url'] }}" target="{{ content.link[app.request.locale]['target'] }}" {% else %}div{% endif%} class="col-md-4 box-icon-col wow fadeInDown">
+      <{% if content.link[app.request.locale]['url'] %}a href="{{ content.link[app.request.locale]['url'] }}" target="{{ content.link[app.request.locale]['target'] }}" {% else %}div{% endif%} class="col-lg-4 col-md-6 box-icon-col wow fadeInDown">
         <div class="box-icon">
           {% if content.media['icon'] %}
           <div class="box-icon-icon">
