@@ -133,6 +133,9 @@ function newCollection() {
                     });
                 }
             });
+        } else {
+            appendCollection(prototype, file);
+            initMagnificPopup();
         }
     });
 }

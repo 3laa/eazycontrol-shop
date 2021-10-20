@@ -11,6 +11,11 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class MediaType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options) {
+
+        if(in_array('icon', $options['type'])) {
+            $builder->add('icon', TextType::class, ['required'=>false]);
+        }
+
         if(in_array('image', $options['type'])) {
             $builder->add('image', CkFinderType::class);
         }

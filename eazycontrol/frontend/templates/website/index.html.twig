@@ -6,4 +6,5 @@
       {{ include(section.category.frontend, {section:  section}) }}
     {% endif %}
   {% endfor %}
+  {{ include('@frontend/website/sections/facts/index.html.twig') }}
 {% endblock %}
