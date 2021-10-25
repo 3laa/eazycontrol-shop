@@ -2,36 +2,32 @@
 <div class="section section-about">
   <div class="container-fluid about-container">
     <div class="row about-row">
-      <div class="col-md-6 col-sm-12 about-col about-info">
+      <div class="col-lg-6 col-12 about-col about-info">
         <div class="container info-container">
           <div class="row info-row">
             <div class="col-10 info-col">
               <div class="section-heading info-heading">
                 <div class="heading-subtitle info-subtitle">
-                  <span>Passionate About Perfection</span>
+                  <span>{{ section.subtitle[app.request.locale] }}</span>
                 </div>
                 <div class="heading-title info-title">
-                  <span class="heading">OUR EXPERTS COACHES</span>
+                  <span class="heading">{{ section.title[app.request.locale] }}</span>
                 </div>
               </div>
               <div class="info-text">
-                <p>Keep away from people who try to belittle your ambitions. Small people always do that but the really great. Friendly neighbour there that's where we meet Sesame street praese voluptatum.</p>
+                <p>{{ section.text[app.request.locale] }}</p>
               </div>
               <div class="info-button">
-                <a class="btn" href="#">Button Text</a>
+                {{ include('@frontend/theme/particles/link.html.twig', {link: section.link}) }}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-sm-12 about-col about-media">
-        <a href="https://www.youtube-nocookie.com/embed/JsS6MujjOG4" class="-magnific -iframe media">
-          <div class="media-holder hover-effect-1">
-            <div class="media-holder-icon">
-              <i class="fas fa-play"></i>
-            </div>
-            <img src="{{ asset('/build/frontend/images/1.jpg') | imagine_filter('fixed_about') }}" />
-          </div>
+      <div class="col-lg-6 col-12 about-col about-media">
+        {% set media = section.media|mediaLink %}
+        <a href="{{ media['url'] }}" class="-magnific {{ media['class'] }} media">
+          {{ include('@frontend/theme/particles/media-holder.html.twig', {meida: section.media, class:'hover-effect-1', icon: 'fas fa-play'}) }}
         </a>
       </div>
     </div>

@@ -28,7 +28,23 @@ class TemplateFilter extends AbstractExtension
     {
         return [
             new TwigFilter('getPageLink', [$this, 'getPageLink']),
+            new TwigFilter('mediaLink', [$this, 'mediaLink']),
         ];
+    }
+
+    public function mediaLink(array $media): array
+    {
+        $link['class'] = '-image';
+        $link['url'] = $media['image'];
+
+        if(array_key_exists('youtube', $media)) {
+            if($media['youtube']) {
+                $link['class'] = '-iframe';
+                $link['url'] = "https://www.youtube-nocookie.com/embed/".$media['youtube'];
+            }
+        }
+
+        return $link;
     }
 
     public function getPageLink(Page $page, string $local): array

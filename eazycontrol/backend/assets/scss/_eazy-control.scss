@@ -8,6 +8,18 @@
   margin-top: 30px;
 }
 
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba($color-border, .5);
+  border-radius: 0;
+}
+
 .card .card-icon {
   display: flex;
   align-items: center;
@@ -126,10 +138,10 @@
 
 .show .categories {
   position: fixed;
-  top: 115px;
-  right: 7px;
-  height: calc(100% - 130px);
-  width: 27%;
+  top: 125px;
+  right: 17px;
+  height: calc(100% - 145px);
+  width: 26%;
 }
 
 .show .categories > .card {

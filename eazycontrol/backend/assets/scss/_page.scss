@@ -18,11 +18,11 @@ $bar-height: 50px;
   max-height: 100%;
   overflow: hidden;
   z-index: 200;
-  box-shadow: 5px 0 20px 5px rgba($black,.05);
-  background: $black;
+  box-shadow: 1px 0px 20px rgba($black,.08);
+  background: $white;
 
   & span {
-    color: $white;
+    color: $color-text;
     text-transform: uppercase;
   }
 }
@@ -30,7 +30,7 @@ $bar-height: 50px;
 .page .page-sidebar .sidebar-top {
   height: $bar-height;
   width: 100%;
-  border-bottom: 1px solid rgba($white, .08);
+  border-bottom: 1px solid rgba($black, .08);
 }
 
 .page .page-sidebar .sidebar-middle {
@@ -59,6 +59,11 @@ $bar-height: 50px;
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
+  background-color: $black;
+
+  & .link-list .link {
+    color: $white;
+  }
 }
 
 .page .page-content {
@@ -85,7 +90,7 @@ $bar-height: 50px;
   height: $bar-height;
   box-shadow: 0 15px 10px 5px rgba($black,.05);
   z-index: 100;
-  background: $color-background;
+  background: $white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,7 +98,7 @@ $bar-height: 50px;
 }
 
 .page .page-content .content-wrapper {
-  padding: 15px;
+  padding: 25px;
 }
 
 
@@ -117,5 +122,5 @@ $bar-height: 50px;
 }
 
 .link-list .link span {
-  font-weight: $font-weight-600;
+  font-weight: $font-weight-300;
 }

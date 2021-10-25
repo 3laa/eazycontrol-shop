@@ -1,0 +1,11 @@
+{% if class is not defined %}{% set class = '' %}{% endif %}
+{% if image is not defined %}{% set image = meida['image'] %}{% endif %}
+{% if icon is not defined %}{% set icon = '' %}{% endif %}
+<div class="media-holder {{ class }}">
+  {% if icon %}
+  <div class="media-holder-icon">
+    <i class="{{ icon }}"></i>
+  </div>
+  {% endif %}
+  <img src="{{ asset(image) | imagine_filter('fixed_about') }}" />
+</div>

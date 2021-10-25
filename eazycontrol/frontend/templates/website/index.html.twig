@@ -6,5 +6,7 @@
       {{ include(section.category.frontend, {section:  section}) }}
     {% endif %}
   {% endfor %}
-  {{ include('@frontend/website/sections/facts/index.html.twig') }}
+  {{ include('@frontend/website/sections/box-media/index.html.twig') }}
+  {{ include('@frontend/website/sections/testimonial/index.html.twig') }}
+  {{ include('@frontend/website/sections/logos/index.html.twig') }}
 {% endblock %}

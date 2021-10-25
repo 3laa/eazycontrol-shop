@@ -1,26 +1,27 @@
 @charset "utf-8";
 
 $white:              #ffffff;
-$black:              #1d212b;
-$color-alpha:        #22b99a;
+$black:              #2F323E;
+$color-alpha:        #41b3f9;
 $color-alpha-dark:   darken($color-alpha, 20);
 $color-alpha-light:  lighten($color-alpha, 15);
-$color-text:         #7d7d83;
-$color-background:   #f8faf9;
+$color-text:         #54667a;
+$color-background:   #edf1f5;
 $color-border:       #cacaca;
 $color-red:          rgb(180,0,0);
 $background-gradient :  linear-gradient(90deg,$color-alpha-dark 0,$color-alpha 48%,$color-alpha-light 100%);
 
 $SourceSansPro: 'Source Sans Pro', sans-serif;
 $Lato: 'Lato', sans-serif;
+$Rubik: 'Rubik', sans-serif;
 
 $body-line-height:           1.6;
-$body-font-family:           $Lato;
+$body-font-family:           $Rubik;
 $body-letter-spacing:        -0.75px;
 $body-word-spacing:          0px;
 
 $headline-line-height:       1.8;
-$headline-font-family:       $Lato;
+$headline-font-family:       $Rubik;
 $headline-letter-spacing:    0px;
 $headline-word-spacing:      0px;
 
