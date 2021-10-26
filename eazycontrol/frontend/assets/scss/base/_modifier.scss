@@ -11,7 +11,7 @@
   background-color: $alpha;
   border: 1px solid $alpha;
   padding: 9px 34px;
-  font-size: $font-size-h6;
+  @include scale(font-size, $font-size-h6);
   font-family: $headline-font-family;
   border-radius: 50px;
   transition: all .35s ease-in-out;
@@ -46,6 +46,6 @@
     justify-content: center;
     width: 44px;
     height: 44px;
-    font-size: $font-size-base;
+    @include scale(font-size, $font-size-base);
   }
 }

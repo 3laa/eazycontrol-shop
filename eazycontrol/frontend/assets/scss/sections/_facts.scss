@@ -36,13 +36,13 @@
 
   & span {
     color: $white;
-    font-size: 42px;
+    @include scale(font-size, $font-size-h2);
   }
 }
 
 .section-facts .facts-container .facts-row .facts-col .fact .fact-title {
   & span {
     color: $white;
-    font-size: $font-size-h4;
+    @include scale(font-size, $font-size-h4);
   }
 }

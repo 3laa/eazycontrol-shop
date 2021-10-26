@@ -38,7 +38,7 @@
   & span {
     color: $black;
     font-weight: $font-weight-500;
-    font-size: $font-size-h2;
+    @include scale(font-size, $font-size-h2);
   }
 }
 

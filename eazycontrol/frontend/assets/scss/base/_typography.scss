@@ -12,7 +12,7 @@ body {
   font-family: $body-font-family;
   color: $text;
   font-weight: $font-weight-300;
-  font-size: $font-size-base;
+  @include scale(font-size, $font-size-base);
   line-height: $body-line-height;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,31 +50,31 @@ h6,.h6,
 }
 
 h1, .h1 {
-  font-size: $font-size-h1;
+  @include scale(font-size, $font-size-h1);
 }
 
 h2, .h2 {
-  font-size: $font-size-h2;
+  @include scale(font-size, $font-size-h2);
 }
 
 h3, .h3 {
-  font-size: $font-size-h3;
+  @include scale(font-size, $font-size-h3);
 }
 
 h4, .h4 {
-  font-size: $font-size-h4;
+  @include scale(font-size, $font-size-h4);
 }
 
 h5, .h5 {
-  font-size: $font-size-h5;
+  @include scale(font-size, $font-size-h5);
 }
 
 h6, .h6 {
-  font-size: $font-size-h6;
+  @include scale(font-size, $font-size-h6);
 }
 
 .h7 {
-  font-size: $font-size-base;
+  @include scale(font-size, $font-size-h7);
 }
 
 p, .p {
@@ -99,11 +99,11 @@ strong, .strong,
 }
 
 small, .small {
-  font-size: $font-size-base-small;
+  @include scale(font-size, $font-size-base-small);
 }
 
 a {
-  font-size: $font-size-base;
+  @include scale(font-size, $font-size-base);
   color: $beta;
   text-decoration: none;
   background-color: transparent;

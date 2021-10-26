@@ -63,7 +63,7 @@
   }
 
   & span {
-    font-size: $font-size-h3;
+    @include scale(font-size, $font-size-h3);
     color: $black;
     transition: all .35s ease-in-out;
   }

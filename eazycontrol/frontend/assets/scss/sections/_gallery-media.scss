@@ -49,6 +49,6 @@
 .section-gallery-media .gallery-media-row .gallery-media-col .gallery-media .gallery-media-title {
   & span {
     color: $white;
-    font-size: $font-size-h4;
+    @include scale(font-size, $font-size-h4);
   }
 }

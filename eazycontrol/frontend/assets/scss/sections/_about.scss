@@ -51,7 +51,7 @@
   margin-bottom: 30px;
 
   & p {
-    font-size: $font-size-h6;
+    @include scale(font-size, $font-size-h6);
   }
 }
 

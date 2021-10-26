@@ -54,7 +54,7 @@
   margin-bottom: 20px;
 
   & .heading {
-    font-size: 60px;
+    @include scale(font-size, 3.8);
     color: $white;
   }
 }
@@ -64,7 +64,7 @@
 
   & p {
     color: $white;
-    font-size: $font-size-h4;
+    @include scale(font-size, 1.7);
   }
 }
 

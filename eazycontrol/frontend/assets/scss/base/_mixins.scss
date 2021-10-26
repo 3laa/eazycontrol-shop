@@ -37,3 +37,23 @@
   font-weight: 900;
 }
 
+@mixin scale($prop, $val)
+{
+  #{$prop}: ($font-size-base-px * $val) * .75;
+
+  @media (min-width: $breakpoints-sm) {
+    #{$prop}: ($font-size-base-px * $val) * .8;
+  }
+
+  @media (min-width: $breakpoints-md) {
+    #{$prop}: ($font-size-base-px * $val) * .85;
+  }
+
+  @media (min-width: $breakpoints-lg) {
+    #{$prop}: ($font-size-base-px * $val) * .9;
+  }
+
+  @media (min-width: $breakpoints-xl) {
+    #{$prop}: $font-size-base-px * $val;
+  }
+}

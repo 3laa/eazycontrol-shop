@@ -64,7 +64,7 @@
 
   & span {
     color: $white;
-    font-size: $font-size-h5;
+    @include scale(font-size, $font-size-h5);
   }
 }
 
