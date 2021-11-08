@@ -27,7 +27,7 @@
       <div class="col-lg-6 col-12 about-col about-media">
         {% set media = section.media|mediaLink %}
         <a href="{{ media['url'] }}" class="-magnific {{ media['class'] }} media">
-          {{ include('@frontend/theme/particles/media-holder.html.twig', {meida: section.media, class:'hover-effect-1', icon: 'fas fa-play'}) }}
+          {{ include('@frontend/theme/particles/media-holder.html.twig', {meida: section.media, class:'hover-effect-1', imagine_filter: 'fixed_about', icon: 'fas fa-play'}) }}
         </a>
       </div>
     </div>

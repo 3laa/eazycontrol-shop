@@ -50,6 +50,6 @@
 
 .section-box-media .box-media-container .box-media-row .box-media-col .box-media .box-media-info .info-text {
   & p {
-    font-size: $font-size-h6;
+    @include scale(font-size, $font-size-h6);
   }
 }

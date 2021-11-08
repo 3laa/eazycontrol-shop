@@ -1,7 +1,23 @@
 Backend
 1- login
 2- error
-3-
+3- add logo
+4- Change Password
 
 Frontend
-1- cookies
+1- cookies "cookieconsent"
+2- SEO
+3- breadcrumbs product and article
+4- error
+5- paginierung :: sor
+6- add product to cart
+7- remove product
+8- languages rtl
+9- to top
+10- forms
+11- double scroll problem
+12- account area
+13- add clear cache
+14- language switcher
+15- show subcategory
+16- add market

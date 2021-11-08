@@ -1,115 +1,30 @@
+{% set activeContents = section.contents|activeContents(app.request.locale) %}
 <section class="section section-box-media">
   {{ include('@frontend/theme/particles/heading.html.twig') }}
   <div class="container box-media-container">
     <div class="row box-media-row">
-
-      <a href="#" class="col-md-4 box-media-col">
+      {% for key,content in activeContents %}
+      <{% if content.link[app.request.locale]['url'] %}a href="{{ content.link[app.request.locale]['url'] }}" target="{{ content.link[app.request.locale]['target'] }}" {% else %}div{% endif%} class="col-lg-4 col-md-6 box-media-col wow fadeInDown">
         <div class="box-media">
           <div class="box-media-media">
-            <div class="media-holder hover-effect-2">
-              <img src="{{ asset('/build/frontend/images/1.jpg') | imagine_filter('thumbnail_media_box') }}" />
-            </div>
+            {% set media = content.media|mediaLink %}
+            {{ include('@frontend/theme/particles/media-holder.html.twig', {meida: content.media, class:'hover-effect-2', imagine_filter: 'thumbnail_media_box'}) }}
           </div>
           <div class="box-media-info">
+            {% if content.title[app.request.locale] %}
             <div class="info-title">
-              <span class="heading">CHALLENGE YOUR LIMITS</span>
+              <span class="heading">{{ content.title[app.request.locale] }}</span>
             </div>
+            {% endif %}
+            {% if content.subtitle[app.request.locale] %}
             <div class="info-text">
-              <p>Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
+              <p>{{ content.subtitle[app.request.locale] }}</p>
             </div>
+            {% endif %}
           </div>
         </div>
-      </a>
-
-      <div class="col-md-4 box-media-col">
-        <div class="box-media">
-          <div class="box-media-media">
-            <div class="media-holder hover-effect-2">
-              <img src="{{ asset('/build/frontend/images/2.jpg') | imagine_filter('thumbnail_media_box') }}" />
-            </div>
-          </div>
-          <div class="box-media-info">
-            <div class="info-title">
-              <span class="heading">CHALLENGE YOUR LIMITS</span>
-            </div>
-            <div class="info-text">
-              <p>Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a href="#" class="col-md-4 box-media-col">
-        <div class="box-media">
-          <div class="box-media-media">
-            <div class="media-holder hover-effect-2">
-              <img src="{{ asset('/build/frontend/images/3.jpg') | imagine_filter('thumbnail_media_box') }}" />
-            </div>
-          </div>
-          <div class="box-media-info">
-            <div class="info-title">
-              <span class="heading">CHALLENGE YOUR LIMITS</span>
-            </div>
-            <div class="info-text">
-              <p>Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <div class="col-md-4 box-media-col">
-        <div class="box-media">
-          <div class="box-media-media">
-            <div class="media-holder hover-effect-2">
-              <img src="{{ asset('/build/frontend/images/4.jpg') | imagine_filter('thumbnail_media_box') }}" />
-            </div>
-          </div>
-          <div class="box-media-info">
-            <div class="info-title">
-              <span class="heading">CHALLENGE YOUR LIMITS</span>
-            </div>
-            <div class="info-text">
-              <p>Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a href="#" class="col-md-4 box-media-col">
-        <div class="box-media">
-          <div class="box-media-media">
-            <div class="media-holder hover-effect-2">
-              <img src="{{ asset('/build/frontend/images/1.jpg') | imagine_filter('thumbnail_media_box') }}" />
-            </div>
-          </div>
-          <div class="box-media-info">
-            <div class="info-title">
-              <span class="heading">CHALLENGE YOUR LIMITS</span>
-            </div>
-            <div class="info-text">
-              <p>Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <div class="col-md-4 box-media-col">
-        <div class="box-media">
-          <div class="box-media-media">
-            <div class="media-holder hover-effect-2">
-              <img src="{{ asset('/build/frontend/images/2.jpg') | imagine_filter('thumbnail_media_box') }}" />
-            </div>
-          </div>
-          <div class="box-media-info">
-            <div class="info-title">
-              <span class="heading">CHALLENGE YOUR LIMITS</span>
-            </div>
-            <div class="info-text">
-              <p>Keep away from people who try to belittle your ambitions. Small people always do that but the really great.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </{% if content.link[app.request.locale]['url'] %}a{% else %}div{% endif%}>
+      {% endfor %}
 
     </div>
   </div>
