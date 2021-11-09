@@ -8,7 +8,7 @@ php bin/console debug:router
 php bin/console cache:clear
 php bin/console cache:pool:clear cache.app_clearer
 
-php bin/console make:entity Section
+php bin/console make:entity Element
 
 php bin/console doctrine:database:create
 php bin/console make:migration

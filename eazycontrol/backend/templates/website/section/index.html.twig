@@ -14,7 +14,7 @@
       <div class="col-8 sections">
         <div class="card">
           <div class="card-body">
-            <h2 class="card-title">Sections</h2>
+            <h2 class="card-title">Page Sections • Page Structure</h2>
 
             <ul class="cards-list sections-list {% if page.sections|length == 0 %}-empty{% endif %}">
               {% for key, section in page.sections %}
@@ -34,8 +34,8 @@
                           {% endif %}
                         </div>
                         <div class="panel-info">
-                          <h3 class="panel-title">{{ section.title['default'] }}</h3>
-                          <h6 class="panel-text"> {{ section.category.name }} </h6>
+                          <h3 class="panel-title">{{ section.category.name }}</h3>
+                          <h6 class="panel-text">{{ section.title['default'] }}</h6>
                         </div>
                         <div class="panel-options card-options">
                           <a href="{{ path('backend_website_section_edit', {id: section.id}) }}" class="option">
@@ -65,7 +65,7 @@
       <div class="col-4 categories">
         <div class="card">
           <div class="card-body">
-            <h2 class="card-title">Categories</h2>
+            <h2 class="card-title">Sections Types</h2>
             <ul class="cards-list categories-list">
               {% for key, category in categories %}
                 <li class="card-item category-item" data-category="{{ category.id }}" data-page="{{ page.id }}">
