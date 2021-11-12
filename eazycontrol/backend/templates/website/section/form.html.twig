@@ -36,7 +36,7 @@
       {% if form.contents is defined %}
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="contents-tab" data-bs-toggle="tab" data-bs-target="#contents" type="button"
-                  role="tab" aria-controls="contents" aria-selected="false">Contents
+                  role="tab" aria-controls="contents" aria-selected="false">Contents <span class="badge rounded-pill bg-danger">{{ form.contents|length }}</span>
           </button>
         </li>
       {% endif %}

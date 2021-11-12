@@ -1,70 +1,17 @@
+{% set activeContents = section.contents|activeContents(app.request.locale) %}
 <section class="section-logos -swiper">
   {{ include('@frontend/theme/particles/heading.html.twig') }}
-
   <div class="container logos-container">
     <div class="swiper logos-swiper">
       <div class="swiper-container logos-swiper-container">
         <div class="swiper-wrapper logos-swiper-wrapper">
+          {% for key,content in activeContents %}
           <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <a href="#" class="logo">
-              <img src="{{ asset('/upload/images/logos/9.png') | imagine_filter('relative_resize_logos') }}">
-            </a>
+            <{% if content.link[app.request.locale]['url'] %}a href="{{ content.link[app.request.locale]['url'] }}" target="{{ content.link[app.request.locale]['target'] }}" {% else %}div{% endif%} href="#" class="logo">
+              <img src="{{ asset(content.media.image) | imagine_filter('relative_resize_logos') }}">
+            </{% if content.link[app.request.locale]['url'] %}a{% else %}div{% endif%}>
           </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <div class="logo">
-              <img src="{{ asset('/upload/images/logos/10.gif') | imagine_filter('relative_resize_logos') }}">
-            </div>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <a href="#" class="logo">
-              <img src="{{ asset('/upload/images/logos/11.jpeg') | imagine_filter('relative_resize_logos') }}">
-            </a>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <a href="#" class="logo">
-              <img src="{{ asset('/upload/images/logos/7.jpeg') | imagine_filter('relative_resize_logos') }}">
-            </a>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <div class="logo">
-              <img src="{{ asset('/upload/images/logos/6.jpeg') | imagine_filter('relative_resize_logos') }}">
-            </div>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <a href="#" class="logo">
-              <img src="{{ asset('/upload/images/logos/5.jpeg') | imagine_filter('relative_resize_logos') }}">
-            </a>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <div class="logo">
-              <img src="{{ asset('/upload/images/logos/4.jpeg') | imagine_filter('relative_resize_logos') }}">
-            </div>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <a href="#" class="logo">
-              <img src="{{ asset('/upload/images/logos/3.png') | imagine_filter('relative_resize_logos') }}">
-            </a>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <a href="#" class="logo">
-              <img src="{{ asset('/upload/images/logos/1.png') | imagine_filter('relative_resize_logos') }}">
-            </a>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <div class="logo">
-              <img src="{{ asset('/upload/images/logos/11.jpeg') | imagine_filter('relative_resize_logos') }}">
-            </div>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <div class="logo">
-              <img src="{{ asset('/upload/images/logos/8.png') | imagine_filter('relative_resize_logos') }}">
-            </div>
-          </div>
-          <div class="swiper-slide logo-swiper-slide col-lg-2 col-sm-3 col-6">
-            <div class="logo">
-              <img src="{{ asset('/upload/images/logos/12.jpeg') | imagine_filter('relative_resize_logos') }}">
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="swiper-button swiper-button-next btn btn-circle">

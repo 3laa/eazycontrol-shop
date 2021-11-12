@@ -1,105 +1,25 @@
+{% set activeContents = section.contents|activeContents(app.request.locale) %}
 <section class="section-gallery-media -magnific-gallery">
   {{ include('@frontend/theme/particles/heading.html.twig') }}
   <div class="container gallery-media-container">
     <div class="row gallery-media-row">
 
+      {% for key,content in activeContents %}
       <div class="col-lg-3 col-md-4 col-6 gallery-media-col gallery-col">
-        <a href="{{ asset('/build/frontend/images/2.jpg') | imagine_filter('relative_resize_gallery_media') }}" class="gallery-media -magnific-link">
-          <img src="{{ asset('/build/frontend/images/2.jpg') | imagine_filter('thumbnail_gallery_media') }}" class="gallery-media-image" />
+        <a href="{{ asset(content.media.image) | imagine_filter('relative_resize_gallery_media') }}" class="gallery-media -magnific-link">
+          <img src="{{ asset(content.media.image) | imagine_filter('thumbnail_gallery_media') }}" class="gallery-media-image" />
           <div class="gallery-media-overlay">
             <div class="btn btn-circle gallery-media-icon">
               <i class="fas fa-search"></i>
             </div>
             <div class="gallery-media-title">
-              <span class="heading">workout gallery</span>
+              <span class="heading">{{ content.title[app.request.locale] }}</span>
             </div>
           </div>
         </a>
       </div>
+      {% endfor %}
 
-      <div class="col-lg-3 col-md-4 col-6 gallery-media-col gallery-col">
-        <a href="{{ asset('/build/frontend/images/1.jpg') | imagine_filter('relative_resize_gallery_media')  }}" class="gallery-media -magnific-link">
-          <img src="{{ asset('/build/frontend/images/1.jpg') | imagine_filter('thumbnail_gallery_media') }}" class="gallery-media-image" />
-          <div class="gallery-media-overlay">
-            <div class="btn btn-circle gallery-media-icon">
-              <i class="fas fa-search"></i>
-            </div>
-            <div class="gallery-media-title">
-              <span class="heading">workout gallery</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6 gallery-media-col gallery-col">
-        <a href="{{ asset('/build/frontend/images/3.jpg') | imagine_filter('relative_resize_gallery_media')  }}" class="gallery-media -magnific-link">
-          <img src="{{ asset('/build/frontend/images/3.jpg') | imagine_filter('thumbnail_gallery_media') }}" class="gallery-media-image" />
-          <div class="gallery-media-overlay">
-            <div class="btn btn-circle gallery-media-icon">
-              <i class="fas fa-search"></i>
-            </div>
-            <div class="gallery-media-title">
-              <span class="heading">workout gallery</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6 gallery-media-col gallery-col">
-        <a href="{{ asset('/build/frontend/images/4.jpg') | imagine_filter('relative_resize_gallery_media') }} " class="gallery-media -magnific-link">
-          <img src="{{ asset('/build/frontend/images/4.jpg') | imagine_filter('thumbnail_gallery_media') }}" class="gallery-media-image" />
-          <div class="gallery-media-overlay">
-            <div class="btn btn-circle gallery-media-icon">
-              <i class="fas fa-search"></i>
-            </div>
-            <div class="gallery-media-title">
-              <span class="heading">workout gallery</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6 gallery-media-col gallery-col">
-        <a href="{{ asset('/build/frontend/images/3.jpg') | imagine_filter('relative_resize_gallery_media')  }}" class="gallery-media -magnific-link">
-          <img src="{{ asset('/build/frontend/images/3.jpg') | imagine_filter('thumbnail_gallery_media') }}" class="gallery-media-image" />
-          <div class="gallery-media-overlay">
-            <div class="btn btn-circle gallery-media-icon">
-              <i class="fas fa-search"></i>
-            </div>
-            <div class="gallery-media-title">
-              <span class="heading">workout gallery</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6 gallery-media-col gallery-col">
-        <a href="{{ asset('/build/frontend/images/2.jpg') | imagine_filter('relative_resize_gallery_media')  }}" class="gallery-media -magnific-link">
-          <img src="{{ asset('/build/frontend/images/2.jpg') | imagine_filter('thumbnail_gallery_media') }}" class="gallery-media-image" />
-          <div class="gallery-media-overlay">
-            <div class="btn btn-circle gallery-media-icon">
-              <i class="fas fa-search"></i>
-            </div>
-            <div class="gallery-media-title">
-              <span class="heading">workout gallery</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6 gallery-media-col gallery-col">
-        <a href="{{ asset('/build/frontend/images/1.jpg') | imagine_filter('relative_resize_gallery_media')  }}" class="gallery-media -magnific-link">
-          <img src="{{ asset('/build/frontend/images/1.jpg') | imagine_filter('thumbnail_gallery_media') }}" class="gallery-media-image" />
-          <div class="gallery-media-overlay">
-            <div class="btn btn-circle gallery-media-icon">
-              <i class="fas fa-search"></i>
-            </div>
-            <div class="gallery-media-title">
-              <span class="heading">workout gallery</span>
-            </div>
-          </div>
-        </a>
-      </div>
 
     </div>
   </div>

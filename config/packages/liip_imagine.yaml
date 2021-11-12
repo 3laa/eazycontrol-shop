@@ -34,7 +34,7 @@ liip_imagine:
                     widen: 1000
 
         relative_resize_blank:
-            quality: 75
+            quality: 50
             filters:
                 relative_resize:
                     widen: 850
@@ -48,7 +48,7 @@ liip_imagine:
                     allow_upscale: true
 
         thumbnail_gallery_media:
-            quality: 75
+            quality: 50
             filters:
                 thumbnail:
                     size: [250, 250]

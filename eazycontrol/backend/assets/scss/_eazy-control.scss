@@ -39,7 +39,7 @@
   border-bottom: 1px solid rgba($black,.125);
 
   &.dark {
-    background: $black;
+    background: linear-gradient(to bottom, rgba($black,1) 0%, rgba($color-text,1) 100%);
 
     & .header-title {
       color: $white;
@@ -186,13 +186,20 @@
 .nav-tabs {
   border-bottom: 0 none;
 
-  .nav-link {
+  & .nav-link {
     color: $color-text;
     font-weight: $font-weight-700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .badge {
+      margin-left: 3px;
+    }
   }
 
-  .nav-link.active,
-  .nav-item.show .nav-link {
+  & .nav-link.active,
+  & .nav-item.show .nav-link {
     color: $color-alpha;
   }
 }
