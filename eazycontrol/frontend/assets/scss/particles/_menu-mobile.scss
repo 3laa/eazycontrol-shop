@@ -31,7 +31,7 @@
 
   & .menu-wrapper ul.menu li.menu-entry a.menu-link {
     font-weight: $font-weight-500;
-    @include scale(font-size, $font-size-h5);
+    font-size: ms(2);
     color: $white;
     font-family: $headline-font-family;
 

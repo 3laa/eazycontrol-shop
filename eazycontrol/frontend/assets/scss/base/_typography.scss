@@ -9,10 +9,26 @@ html {
 }
 
 body {
+  font-size: $font-size-base * $font-size-rate-xs;
+  @media (min-width: $breakpoints-sm) {
+    font-size: $font-size-base * $font-size-rate-sm;
+  }
+  @media (min-width: $breakpoints-md) {
+    font-size: $font-size-base * $font-size-rate-md;
+  }
+  @media (min-width: $breakpoints-lg) {
+    font-size: $font-size-base * $font-size-rate-lg;
+  }
+  @media (min-width: $breakpoints-xl) {
+    font-size: $font-size-base * $font-size-rate-xl;
+  }
+  @media (min-width: $breakpoints-xxl) {
+    font-size: $font-size-base * $font-size-rate-xxl;
+  }
+
   font-family: $body-font-family;
   color: $text;
   font-weight: $font-weight-300;
-  @include scale(font-size, $font-size-base);
   line-height: $body-line-height;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,34 +66,35 @@ h6,.h6,
 }
 
 h1, .h1 {
-  @include scale(font-size, $font-size-h1);
+  font-size: ms(6);
 }
 
 h2, .h2 {
-  @include scale(font-size, $font-size-h2);
+  font-size: ms(5);
 }
 
 h3, .h3 {
-  @include scale(font-size, $font-size-h3);
+  font-size: ms(4);
 }
 
 h4, .h4 {
-  @include scale(font-size, $font-size-h4);
+  font-size: ms(3);
 }
 
 h5, .h5 {
-  @include scale(font-size, $font-size-h5);
+  font-size: ms(2);
 }
 
 h6, .h6 {
-  @include scale(font-size, $font-size-h6);
+  font-size: ms(1);
 }
 
 .h7 {
-  @include scale(font-size, $font-size-h7);
+  font-size: ms(0);
 }
 
 p, .p {
+  font-size: ms(0);
   font-family: $body-font-family;
   font-weight: $font-weight-300;
   line-height: $body-line-height;
@@ -99,11 +116,11 @@ strong, .strong,
 }
 
 small, .small {
-  @include scale(font-size, $font-size-base-small);
+  font-size: ms(-1);
 }
 
 a {
-  @include scale(font-size, $font-size-base);
+  font-size: ms(0);
   color: $beta;
   text-decoration: none;
   background-color: transparent;

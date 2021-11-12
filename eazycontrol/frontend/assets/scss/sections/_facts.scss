@@ -28,21 +28,21 @@
 .section-facts .facts-container .facts-row .facts-col .fact {
   color: $white;
   text-align: center;
-  padding: 50px;
+  padding: ms(6);
 }
 
 .section-facts .facts-container .facts-row .facts-col .fact .fact-number {
-  margin-bottom: 20px;
+  margin-bottom: ms(1);
 
   & span {
     color: $white;
-    @include scale(font-size, $font-size-h2);
+    font-size: ms(5);
   }
 }
 
 .section-facts .facts-container .facts-row .facts-col .fact .fact-title {
   & span {
     color: $white;
-    @include scale(font-size, $font-size-h4);
+    font-size: ms(3);
   }
 }

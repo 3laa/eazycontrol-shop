@@ -1,7 +1,7 @@
 .section-box-media {
-  padding: 50px 0;
+  padding: ms(6) 0;
   @include breakpoint($breakpoints-md) {
-    padding: 100px 0;
+    padding: ms(10) 0;
   }
   border-bottom: 1px solid $border;
 }
@@ -11,12 +11,12 @@
 }
 
 .section-box-media .box-media-container .box-media-row {
-  margin-bottom: -50px;
+  margin-bottom: ms(6) * -1;
   align-items: stretch;
 }
 
 .section-box-media .box-media-container .box-media-row .box-media-col {
-  margin-bottom: 50px;
+  margin-bottom: ms(6);
 }
 
 .section-box-media .box-media-container .box-media-row .box-media-col .box-media {
@@ -29,16 +29,16 @@
 
 .section-box-media .box-media-container .box-media-row .box-media-col .box-media .box-media-info {
   text-align: center;
-  padding: 50px 50px 0px 50px;
+  padding: ms(6) ms(6) 0px ms(6);
 }
 
 .section-box-media .box-media-container .box-media-row .box-media-col .box-media .box-media-info .info-title {
-  margin-bottom: 20px;
+  margin-bottom: ms(1);
 
   & span {
     color: $black;
     font-weight: $font-weight-500;
-    @include scale(font-size, $font-size-h2);
+    font-size: ms(5);
   }
 }
 
@@ -50,6 +50,6 @@
 
 .section-box-media .box-media-container .box-media-row .box-media-col .box-media .box-media-info .info-text {
   & p {
-    @include scale(font-size, $font-size-h6);
+    font-size: ms(1);
   }
 }

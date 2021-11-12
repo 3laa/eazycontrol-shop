@@ -11,13 +11,13 @@
   background-color: $alpha;
   border: 1px solid $alpha;
   padding: 9px 34px;
-  @include scale(font-size, $font-size-h6);
+  font-size: ms(1);
   font-family: $headline-font-family;
   border-radius: 50px;
   transition: all .35s ease-in-out;
 
   &:hover {
-    color: $alpha;
+    color: $alpha !important;
     background-color: transparent;
     border: 1px solid $alpha;
     box-shadow: none !important;
@@ -44,8 +44,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    @include scale(font-size, $font-size-base);
+    width: 3em;
+    height: 3em;
+    font-size: ms(0);
   }
 }

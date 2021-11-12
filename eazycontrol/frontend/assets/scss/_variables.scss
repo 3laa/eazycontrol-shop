@@ -5,21 +5,31 @@ $breakpoints-lg: 992px;   // Large	lg	≥992px
 $breakpoints-xl: 1200px;  // Extra large	xl	≥1200px
 $breakpoints-xxl: 1400px; // Extra extra large	xxl	≥1400px
 
+
+
 $max-widths-1: 540px;
 $max-widths-2: 720px;
 $max-widths-3: 960px;
 $max-widths-4: 1140px;
 
-$font-size-base-px: 15px;
-$font-size-base: 1;
-$font-size-base-small: 0.8;
-$font-size-h1: 3;
-$font-size-h2: 2.6;
-$font-size-h3: 2.2;
-$font-size-h4: 1.8;
-$font-size-h5: 1.4;
-$font-size-h6: 1.2;
-$font-size-h7: 1;
+
+
+$font-size-base: 16px;
+
+$font-size-rate-xs: .85;
+$font-size-rate-sm: .87;
+$font-size-rate-md: .9;
+$font-size-rate-lg: .95;
+$font-size-rate-xl: .97;
+$font-size-rate-xxl: 1;
+
+$ms-ratio: $minor-third;
+$modularscale: (
+    base: $ms-base,
+    ratio: $ms-ratio
+);
+
+
 
 $white:      #ffffff;
 $black:      #0d1619;
@@ -30,6 +40,8 @@ $text:       #777777;
 $background: #f6f6f6;
 $border:     #e1e1e1;
 
+
+
 $openSans: 'Open Sans', sans-serif;
 $teko: 'Teko', sans-serif;
 
@@ -38,10 +50,14 @@ $body-font-family:           $openSans;
 $body-letter-spacing:        0px;
 $body-word-spacing:          0px;
 
+
+
 $headline-line-height:       1.2;
 $headline-font-family:       $teko;
 $headline-letter-spacing:    0px;
 $headline-word-spacing:      0px;
+
+
 
 $font-weight-300:           300;
 $font-weight-400:           400;

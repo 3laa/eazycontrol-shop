@@ -7,9 +7,9 @@
 }
 
 .section-slider .swiper-slide {
-  padding: 100px 0;
+  padding: ms(12) 0;
   @include breakpoint($breakpoints-md) {
-    padding: 200px 0;
+    padding: ms(13) 0;
   }
   position: relative;
 }
@@ -51,20 +51,26 @@
 }
 
 .section-slider .swiper-slide .slide-container .slide-row .slide-col .slide-title {
-  margin-bottom: 20px;
+  margin-bottom: ms(1);
 
   & .heading {
-    @include scale(font-size, 3.8);
+    font-size: ms(5);
+    @include breakpoint($breakpoints-md) {
+      font-size: ms(8);
+    }
     color: $white;
   }
 }
 
 .section-slider .swiper-slide .slide-container .slide-row .slide-col .slide-text {
-  margin-bottom: 20px;
+  margin-bottom: ms(1);
 
   & p {
     color: $white;
-    @include scale(font-size, 1.7);
+    font-size: ms(1);
+    @include breakpoint($breakpoints-md) {
+      font-size: ms(2);
+    }
   }
 }
 

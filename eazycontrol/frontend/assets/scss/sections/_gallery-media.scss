@@ -1,7 +1,7 @@
 .section-gallery-media {
-  padding: 50px 0;
+  padding: ms(6) 0;
   @include breakpoint($breakpoints-md) {
-    padding: 100px 0;
+    padding: ms(10) 0;
   }
   border-bottom: 1px solid $border;
 }
@@ -43,12 +43,12 @@
 }
 
 .section-gallery-media .gallery-media-row .gallery-media-col .gallery-media .gallery-media-icon {
-  margin-bottom: 20px;
+  margin-bottom: ms(1);
 }
 
 .section-gallery-media .gallery-media-row .gallery-media-col .gallery-media .gallery-media-title {
   & span {
     color: $white;
-    @include scale(font-size, $font-size-h4);
+    font-size: ms(3);
   }
 }

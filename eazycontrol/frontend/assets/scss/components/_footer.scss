@@ -2,10 +2,10 @@ footer.footer {
   padding: 50px 0;
   background: $dark;
   text-align: center;
-  @include scale(font-size, $font-size-base-small);
+  font-size: ms(-1);
 
   & a {
-    @include scale(font-size, $font-size-base-small);
+    font-size: ms(-1);
     color: $white;
 
     &:hover {

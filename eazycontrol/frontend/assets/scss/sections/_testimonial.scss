@@ -1,13 +1,13 @@
 .section-testimonial {
+  padding: ms(6) 0;
+  @include breakpoint($breakpoints-md) {
+    padding: ms(10) 0;
+  }
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  padding: 50px 0;
-  @include breakpoint($breakpoints-md) {
-    padding: 100px 0;
-  }
 }
 
 .section-testimonial .testimonial-overlay {
@@ -51,7 +51,7 @@
 }
 
 .section-testimonial .testimonial-container .testimonial-row .testimonial-col .testimonial-text {
-  margin-bottom: 25px;
+  margin-bottom: ms(2);
 
   & p {
     color: $white;
@@ -59,12 +59,11 @@
 }
 
 .section-testimonial .testimonial-container .testimonial-row .testimonial-col .testimonial-name-position {
-
-  margin-bottom: 20px;
+  margin-bottom: ms(1);
 
   & span {
     color: $white;
-    @include scale(font-size, $font-size-h5);
+    font-size: ms(2);
   }
 }
 

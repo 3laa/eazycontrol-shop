@@ -1,28 +1,28 @@
 .section-contact-form {
-  padding: 50px 0;
+  padding: ms(6) 0;
   @include breakpoint($breakpoints-md) {
-    padding: 100px 0;
+    padding: ms(10) 0;
   }
   border-bottom: 1px solid $border;
 }
 
 .section-contact-form .contact-form-row {
-  margin-bottom: -50px;
+  margin-bottom: ms(6) * -1;
 }
 
 .section-contact-form .contact-form-row .contact-form-col {
-  margin-bottom: 50px;
+  margin-bottom: ms(6);
 }
 
 .section-contact-form .col-info .info-text {
-  margin-bottom: 25px;
+  margin-bottom: ms(2);
 }
 
 .section-contact-form .col-info .info-list {
-  margin-bottom: 25px;
+  margin-bottom: ms(2);
 
   & ul li + li {
-    margin-top: 10px;
+    margin-top: ms(-3);
   }
 }
 

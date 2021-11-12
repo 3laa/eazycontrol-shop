@@ -1,7 +1,7 @@
 .section-box-icon {
-  padding: 50px 0;
+  padding: ms(6) 0;
   @include breakpoint($breakpoints-md) {
-    padding: 100px 0;
+    padding: ms(10) 0;
   }
   border-bottom: 1px solid $border;
 }
@@ -11,16 +11,16 @@
 }
 
 .section-box-icon .box-icon-container .box-icon-row {
-  margin-bottom: -50px;
+  margin-bottom: ms(6) * -1;
   align-items: stretch;
 }
 
 .section-box-icon .box-icon-container .box-icon-row .box-icon-col {
-  margin-bottom: 50px;
+  margin-bottom: ms(6);
 }
 
 .section-box-icon .box-icon-container .box-icon-row .box-icon-col .box-icon {
-  padding: 0 50px;
+  padding: 0 ms(6);
   text-align: center;
   height: 100%;
 }
@@ -39,7 +39,7 @@
   box-shadow: 0 0 2px 5px rgb($border, .4);
   text-align: center;
   border-radius: 50%;
-  margin-bottom: 25px;
+  margin-bottom: ms(2);
   transition: all .35s ease-in-out;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .section-box-icon .box-icon-container .box-icon-row .box-icon-col .box-icon .box-icon-title {
-  margin-bottom: 25px;
+  margin-bottom: ms(2);
 
   &:after {
     content: '';
@@ -63,7 +63,7 @@
   }
 
   & span {
-    @include scale(font-size, $font-size-h3);
+    font-size: ms(4);
     color: $black;
     transition: all .35s ease-in-out;
   }

@@ -19,9 +19,9 @@
 
 
 .section-about .about-container .about-row .about-col.about-info {
-  padding: 50px 0;
+  padding: ms(6) 0;
   @include breakpoint($breakpoints-md) {
-    padding: 100px 0;
+    padding: ms(10) 0;
   }
   position: relative;
 }
@@ -44,14 +44,14 @@
 
 
 .section-about .about-container .about-row .about-col.about-info .info-container .info-row .info-col .section-heading.info-heading {
-  margin-bottom: 25px;
+  margin-bottom: ms(2);
 }
 
 .section-about .about-container .about-row .about-col.about-info .info-container .info-row .info-col .info-text {
-  margin-bottom: 30px;
+  margin-bottom: ms(3);
 
   & p {
-    @include scale(font-size, $font-size-h6);
+    font-size: ms(1);
   }
 }
 

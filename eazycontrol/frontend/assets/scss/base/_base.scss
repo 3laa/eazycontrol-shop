@@ -145,11 +145,11 @@ strong {
 }
 
 small {
-  @include scale(font-size, $font-size-base-small);
+  font-size: ms(-1);
 }
 
 sub, sup {
-  @include scale(font-size, $font-size-base-small);
+  font-size: ms(-1);
   line-height: 0;
   position: relative;
   vertical-align: baseline;
