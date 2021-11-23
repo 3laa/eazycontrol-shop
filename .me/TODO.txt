@@ -24,3 +24,4 @@ Frontend
 17- languages switcher
 18- arabic slug
 19- add google recaptcha
+20- add contact us to sittings

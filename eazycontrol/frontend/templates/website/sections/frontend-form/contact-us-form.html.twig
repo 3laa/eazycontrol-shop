@@ -4,9 +4,7 @@
     <div class="row contact-form-row">
       <div class="col-md-6 contact-form-col col-info">
         <div class="info-text">
-          <p>
-            IABC principal office currently based in Lebanon. IABC has a regional representative office for North Africa (based in Libya) and for the Gulf (based in UAE), as well as country offices currently in KSA, Tunis, Iraq, Turkey and Oman.
-          </p>
+          {{ section.text[app.request.locale]|raw }}
         </div>
         <div class="info-list">
           <ul>

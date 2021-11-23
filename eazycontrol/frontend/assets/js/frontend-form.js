@@ -61,11 +61,9 @@ function frontendFormAlert($parent, result)
         }
         else if (result['type'] == 'error')
         {
-            console.log(result.errors)
             alertElement = '<div class="alert alert-danger" role="alert">' +
                 '<h5>Error: ' + result['title'] + '</h5>';
             for (let error in result.errors) {
-                console.log(error)
                 alertElement = alertElement + '<hr><p><b>' + result.errors[error][0] + '</b>' + result.errors[error][1] + '</p>';
             }
             alertElement = alertElement + '</div>';

@@ -4,6 +4,7 @@ namespace App\Form\Entity\Website\Section\FrontendForm;
 
 use App\Entity\Section;
 use App\Form\CustomTypes\PropertyByLanguageType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,6 +19,7 @@ class FrontendFormSectionType extends AbstractType
             ])
             ->add('title', PropertyByLanguageType::class)
             ->add('subtitle', PropertyByLanguageType::class)
+            ->add('text', PropertyByLanguageType::class, ['type' => CKEditorType::class])
             ->add('frontendForm')
         ;
     }
