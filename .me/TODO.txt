@@ -21,3 +21,5 @@ Frontend
 14- language switcher
 15- show subcategory
 16- add market
+17- languages switcher
+18- arabic slug
