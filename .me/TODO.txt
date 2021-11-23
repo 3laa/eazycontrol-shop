@@ -25,3 +25,4 @@ Frontend
 18- arabic slug
 19- add google recaptcha
 20- add contact us to sittings
+21- How to Add "Remember Me" Login Functionality

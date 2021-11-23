@@ -22,6 +22,15 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        backend:
+            pattern: ^/EazyControl
+            lazy: true
+            provider: backend_user_provider
+            custom_authenticator: App\Security\UserLoginFormAuthenticator
+            logout:
+                path: backend_security_logout
+                # where to redirect after logout
+                # target: app_any_route
         #backend:
             #pattern: ^/EazyControl
             #anonymous: true
@@ -64,8 +73,8 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/EasyControl/security/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/EasyControl, roles: ROLE_USER }
+        - { path: ^/EazyControl/security/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/EazyControl, roles: ROLE_USER }
         #- { path: ^/account/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         #- { path: ^/account/register-successfully, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         #- { path: ^/account/change-password-successfully, roles: IS_AUTHENTICATED_ANONYMOUSLY }

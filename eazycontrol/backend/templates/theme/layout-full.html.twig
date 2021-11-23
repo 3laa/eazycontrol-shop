@@ -1,0 +1,43 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>EasyControl</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="EasyControl" name="description">
+  <meta content="EasyControl" name="author">
+  <link rel="shortcut icon" href="/build/backend/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="{{ asset('build/vendor/ckfinder/ckfinder.js') }}"></script>
+  <link href="{{ asset('build/vendor/jquery-ui-1.12.1/jquery-ui.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('build/vendor/bootstrap-5.0.2/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('build/vendor/fontawesome-5.15.4/css/all.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('build/vendor/magnific/magnific-popup.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('build/vendor/select2/select2.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('build/vendor/toast/jquery.toast.css') }}" rel="stylesheet"/>
+  {{ encore_entry_link_tags('css-backend') }}
+<body>
+
+<div class="page">
+  {% block body %}{% endblock %}
+</div>
+
+
+
+<script src="{{ asset('build/vendor/jquery-3.6.0/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('build/vendor/jquery-ui-1.12.1/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('build/vendor/popperjs/popper.min.js') }}"></script>
+<script src="{{ asset('build/vendor/bootstrap-5.0.2/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('build/vendor/axios/axios.min.js') }}"></script>
+<script src="{{ asset('build/vendor/sweetalert/sweetalert.min.js') }}"></script>
+<script src="{{ asset('build/vendor/magnific/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('build/vendor/select2/select2.min.js') }}"></script>
+<script src="{{ asset('build/vendor/toast/jquery.toast.js') }}"></script>
+<script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+<script src="{{ asset('build/backend/js/main.js') }}"></script>
+
+{{ include('@backend/theme/flashes.html.twig') }}
+</body>
+</html>

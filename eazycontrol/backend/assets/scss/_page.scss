@@ -124,3 +124,16 @@ $bar-height: 50px;
 .link-list .link span {
   font-weight: $font-weight-300;
 }
+
+.user-page {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+.user-page .user-page-row {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
