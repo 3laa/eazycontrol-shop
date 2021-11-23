@@ -44,6 +44,11 @@ class Section extends Base
      */
     private $contents;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=FrontendForm::class, inversedBy="section")
+     */
+    private $frontendForm;
+
     public function __construct()
     {
         $this->contents = new ArrayCollection();
@@ -128,6 +133,18 @@ class Section extends Base
                 $content->setSection(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getFrontendForm(): ?FrontendForm
+    {
+        return $this->frontendForm;
+    }
+
+    public function setFrontendForm(?FrontendForm $frontendForm): self
+    {
+        $this->frontendForm = $frontendForm;
 
         return $this;
     }

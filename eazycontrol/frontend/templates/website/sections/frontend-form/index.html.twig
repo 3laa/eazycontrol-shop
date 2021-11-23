@@ -1,1 +1,3 @@
-{{ include('@frontend/sections/frontend-form/contact-form.html.twig') }}
+{% if section.frontendForm.frontend %}
+  {{ include(section.frontendForm.frontend) }}
+{% endif %}

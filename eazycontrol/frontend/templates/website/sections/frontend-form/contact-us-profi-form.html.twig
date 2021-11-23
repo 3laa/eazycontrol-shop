@@ -1,0 +1,61 @@
+<section class="section section-contact-form">
+  {{ include('@frontend/theme/particles/heading.html.twig') }}
+  <div class="container contact-form-container">
+    <div class="row contact-form-row">
+      <div class="col-md-6 contact-form-col col-info">
+        <div class="info-text">
+          <p>
+            IABC principal office currently based in Lebanon. IABC has a regional representative office for North Africa (based in Libya) and for the Gulf (based in UAE), as well as country offices currently in KSA, Tunis, Iraq, Turkey and Oman.
+          </p>
+        </div>
+        <div class="info-list">
+          <ul>
+            <li><b>Address:</b> Tayyouneh Center Bldg, 9th Floor, Tayyouneh, Beirut, Lebanon</li>
+            <li><b>Telephone:</b> + 961 01 382942</li>
+            <li><b>Website:</b> <a href="https://ia-bc.com/">https://ia-bc.com/</a> </li>
+            <li><b>Mobile:</b> + 961 70 618278</li>
+            <li><b>Fax:</b> + 961 01 382942</li>
+          </ul>
+        </div>
+        <div class="info-actions">
+          <a href="#" class="btn btn-circle"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="btn btn-circle"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="btn btn-circle"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="btn btn-circle"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="btn btn-circle"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+      <div class="col-md-6 contact-form-col col-form">
+        <h6>{{ section.frontendForm.id }}</h6>
+        <h6>{{ section.frontendForm.type }}</h6>
+        <h6>{{ section.frontendForm.frontend }}</h6>
+        {% set form = frontend.frontendForm(section.frontendForm) %}
+        {% set action = path('frontend_form_index', {frontendForm: section.frontendForm.id, slug: section.frontendForm.slug['name']}) %}
+        {{ form_start(form, {'attr': {'class': 'form', 'target': 'CUF', 'action': action }}) }}
+        <div class="row form-row form">
+          <div class="col-md-6 form-col">
+            {{ form_widget(form.children['firstName'], {'attr': {'placeholder': 'First Name'}}) }}
+          </div>
+          <div class="col-md-6 form-col">
+            {{ form_widget(form.children['lastName'], {'attr': {'placeholder': 'Last Name'}}) }}
+          </div>
+          <div class="col-md-12 form-col">
+            {{ form_widget(form.children['email'], {'attr': {'placeholder': 'Email'}}) }}
+          </div>
+          <div class="col-12 form-col">
+            {{ form_widget(form.children['message'], {'attr': {'placeholder': 'Message'}}) }}
+          </div>
+          <div class="col-12 form-col">
+            {{ form_widget(form.children['privacy'], {'attr': {'placeholder': 'Message'}}) }}
+          </div>
+          <div class="col-12 form-col">
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </div>
+        {{ form_end(form) }}
+        <iframe src="{{ action }}" id="CUF" name="CUF" width="100%" height="250"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

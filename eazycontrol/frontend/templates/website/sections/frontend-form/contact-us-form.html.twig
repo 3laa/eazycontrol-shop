@@ -27,22 +27,31 @@
 
       </div>
       <div class="col-md-6 contact-form-col col-form">
-        <form class="form">
-          <div class="row form-row">
-            <div class="col-md-6 form-col">
-              <input type="text" class="form-control" name="name" placeholder="Your Full Name" required="required">
-            </div>
-            <div class="col-md-6 form-col">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="required">
-            </div>
-            <div class="col-12 form-col">
-              <textarea class="form-control" name="message" placeholder="Your Message:"></textarea>
-            </div>
-            <div class="col-12 form-col">
-              <button type="submit" class="btn">Submit</button>
-            </div>
+        <h6>{{ section.frontendForm.id }}</h6>
+        <h6>{{ section.frontendForm.type }}</h6>
+        <h6>{{ section.frontendForm.frontend }}</h6>
+        {% set form = frontend.frontendForm(section.frontendForm) %}
+        {% set action = path('frontend_form_index', {frontendForm: section.frontendForm.id, slug: section.frontendForm.slug['name']}) %}
+        {{ form_start(form, {'attr': {'class': 'form', 'target': 'CUF', 'action': action }}) }}
+        <div class="row form-row form">
+          <div class="col-md-6 form-col">
+            {{ form_widget(form.children['firstName'], {'attr': {'placeholder': 'First Name'}}) }}
           </div>
-        </form>
+          <div class="col-md-6 form-col">
+            {{ form_widget(form.children['lastName'], {'attr': {'placeholder': 'Last Name'}}) }}
+          </div>
+          <div class="col-md-12 form-col">
+            {{ form_widget(form.children['email'], {'attr': {'placeholder': 'Email'}}) }}
+          </div>
+          <div class="col-12 form-col">
+            {{ form_widget(form.children['message'], {'attr': {'placeholder': 'Message'}}) }}
+          </div>
+          <div class="col-12 form-col">
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </div>
+        {{ form_end(form) }}
+        <iframe src="{{ action }}" id="CUF" name="CUF" width="100%" height="250"></iframe>
       </div>
     </div>
   </div>

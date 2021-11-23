@@ -3,9 +3,12 @@
 namespace App\Service;
 
 use App\Entity\EazyControl;
+use App\Entity\FrontendForm;
 use App\Entity\Page;
+use App\Form\Entity\Website\Section\FrontendForm\ContactUsFormType;
 use phpDocumentor\Reflection\Types\Collection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\FormView;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\ControllerArgumentsEvent;
 
@@ -65,5 +68,10 @@ class FrontendService extends AbstractController
     public function getPagesBreadcrumb()
     {
         return $this->pagesBreadcrumb;
+    }
+
+    public function getFrontendForm(FrontendForm $frontendForm): FormView
+    {
+        return $this->createForm($frontendForm->getType())->createView();
     }
 }
