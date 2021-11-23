@@ -1,17 +1,20 @@
 {% if section.title[app.request.locale] is defined %}
 <div class="container section-heading">
   <div class="row heading-row">
-
     <div class="col-12 heading-col">
-      {% if section.title[app.request.locale] %}
-      <div class="heading-subtitle">
-        <span>{{ section.title[app.request.locale] }}</span>
-      </div>
+      {% if section.title|length %}
+        {% if section.title[app.request.locale] %}
+          <div class="heading-subtitle">
+            <span>{{ section.title[app.request.locale] }}</span>
+          </div>
+        {% endif %}
       {% endif %}
-      {% if section.subtitle[app.request.locale] %}
-      <div class="heading-title">
-        <span class="heading">{{ section.subtitle[app.request.locale] }}</span>
-      </div>
+      {% if section.subtitle|length %}
+        {% if section.subtitle[app.request.locale] %}
+          <div class="heading-title">
+            <span class="heading">{{ section.subtitle[app.request.locale] }}</span>
+          </div>
+        {% endif %}
       {% endif %}
     </div>
   </div>

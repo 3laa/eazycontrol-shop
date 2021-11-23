@@ -319,10 +319,11 @@ class Base
      * @ORM\PrePersist()
      */
     public function updateSlug() {
+        $slugify = new Slugify();
+        $slug = [];
+        $slug['name'] = $slugify->slugify($this->getName());
         if (is_array($this->getTitle()) || is_object($this->getTitle()))
         {
-            $slugify = new Slugify();
-            $slug = [];
             foreach($this->getTitle() as $key=>$value) {
                 if($value) {
                     $slug[$key] = $slugify->slugify($value);

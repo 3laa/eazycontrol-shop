@@ -33,7 +33,7 @@ class PageController extends AbstractController
      */
     public function id(Request $request, Page $page): Response
     {
-        return $this->render("@frontend/index.html.twig");
+        return $this->render("@frontend/index.html.twig", ['page'=>$page]);
     }
 
     /**
@@ -45,6 +45,6 @@ class PageController extends AbstractController
      */
     public function slug(Request $request, Page $page, string $slug=''): Response
     {
-        return $this->render("@frontend/index.html.twig");
+        return $this->render("@frontend/index.html.twig", ['page'=>$page]);
     }
 }
