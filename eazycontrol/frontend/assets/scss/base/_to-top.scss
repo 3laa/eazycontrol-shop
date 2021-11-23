@@ -1,0 +1,17 @@
+.to-top {
+  position: fixed;
+  bottom: ms(1);
+  right: ms(1);
+  z-index: 100;
+  transition: all .35s ease-in-out;
+}
+
+.headroom--top .to-top {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.headroom--top .headroom--not-top {
+  opacity: 1;
+  transform: translateY(0);
+}

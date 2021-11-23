@@ -5,16 +5,18 @@ xx 2- error
 xx 4- Change Password
 
 Frontend
-1- cookies "cookieconsent"
+- BLOG
+- SHOP
+xx 1- cookies "cookieconsent"
 2- SEO
 3- breadcrumbs product and article
-4- error
+xx 4- error
 5- paginierung :: sor
 6- add product to cart
 7- remove product
 8- languages rtl
-9- to top
-10- forms
+xx 9- to top
+xx 10- forms
 11- double scroll problem
 12- account area
 13- add clear cache

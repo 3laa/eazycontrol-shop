@@ -93,10 +93,18 @@ function initAside()
     })
 }
 
+function iniToTop()
+{
+    $(document).on('click', '.to-top', function () {
+        console.log('to-top');
+        $('html, body').animate({scrollTop: 0}, 1000)
+    });
+}
 
 $(document).ready(function () {
     initWOW();
-    initAside()
+    iniToTop();
+    initAside();
     initSwiper();
     iniHeadroom();
     initMagnific();
