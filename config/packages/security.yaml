@@ -74,6 +74,7 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/EazyControl/security/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/EazyControl/security/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/EazyControl, roles: ROLE_USER }
         #- { path: ^/account/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         #- { path: ^/account/register-successfully, roles: IS_AUTHENTICATED_ANONYMOUSLY }

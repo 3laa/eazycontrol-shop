@@ -26,3 +26,5 @@ Frontend
 19- add google recaptcha
 20- add contact us to sittings
 21- How to Add "Remember Me" Login Functionality
+22-  Do you want to send an email to verify the user's email address after registration? (yes/no) [yes]:
+23- add log backend
