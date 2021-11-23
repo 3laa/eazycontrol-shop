@@ -26,10 +26,9 @@
         </div>
 
       </div>
-      <div class="col-md-6 contact-form-col col-form">
-        <h6>{{ section.frontendForm.id }}</h6>
-        <h6>{{ section.frontendForm.type }}</h6>
-        <h6>{{ section.frontendForm.frontend }}</h6>
+      <div class="col-md-6 contact-form-col col-form frontend-form">
+        <div class="frontend-form-alert">
+        </div>
         {% set form = frontend.frontendForm(section.frontendForm) %}
         {% set action = path('frontend_form_index', {frontendForm: section.frontendForm.id, slug: section.frontendForm.slug['name']}) %}
         {{ form_start(form, {'attr': {'class': 'form', 'target': 'CUF', 'action': action }}) }}
@@ -54,7 +53,6 @@
           </div>
         </div>
         {{ form_end(form) }}
-        <iframe src="{{ action }}" id="CUF" name="CUF" width="100%" height="250"></iframe>
       </div>
     </div>
   </div>

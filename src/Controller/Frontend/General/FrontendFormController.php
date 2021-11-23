@@ -3,7 +3,6 @@
 namespace App\Controller\Frontend\General;
 
 use App\Entity\FrontendForm;
-use App\Form\Entity\Website\Section\FrontendForm\ContactUsFormType;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -46,7 +45,7 @@ class FrontendFormController extends AbstractController
         }
         else
         {
-            $result = ['status'=>false, 'data'=>$form];
+            $result = ['status'=>false, 'result'=>$form];
         }
         return $this->json($result);
     }
@@ -64,8 +63,8 @@ class FrontendFormController extends AbstractController
         try {
             $this->mailer->send($email);
         } catch (TransportExceptionInterface $e) {
-            return ['status'=>false, 'error'=>$e->getMessage()];
+            return ['status'=>false, 'result'=>$e->getMessage()];
         }
-        return ['status'=>true, 'data'=>$data];
+        return ['status'=>true, 'result'=>$data];
     }
 }
