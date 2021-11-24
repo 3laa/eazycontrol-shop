@@ -211,6 +211,24 @@ function ckFinderChoseMedia() {
     });
 }
 
+function clearCache()
+{
+    $(document).on('click', '#clear_cache', function () {
+        axios.get(Routing.generate('backend_command_index')).then(function (response) {
+            if (response.data)
+            {
+                $.toast({
+                    heading: 'Success',
+                    text: 'Clear Cache',
+                    icon: 'success',
+                    position: 'top-right',
+                    hideAfter: 7500
+                })
+            }
+        });
+    });
+}
+
 $(document).ready(function () {
     initMagnificPopup();
     initSelect2();
@@ -220,4 +238,5 @@ $(document).ready(function () {
     newCollection();
     ckFinderChoseMedia();
     deleteCollection();
+    clearCache()
 });

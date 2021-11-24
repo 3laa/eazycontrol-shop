@@ -96,8 +96,7 @@ function initAside()
 function iniToTop()
 {
     $(document).on('click', '.to-top', function () {
-        console.log('to-top');
-        $('html, body').animate({scrollTop: 0}, 1000)
+        $('html, body').stop().animate({ scrollTop: 0 }, 500)
     });
 }
 

@@ -4,11 +4,22 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-text-size-adjust: 100%;
+}
+
+html.-nav-lang-open,
+html.-overlay-open {
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 body {

@@ -1,32 +1,44 @@
 Backend
 xx 1- login
 xx 2- error
- 3- add logo
 xx 4- Change Password
 
 Frontend
-- BLOG
-- SHOP
+xx 22- Why not fast
+8- languages rtl
+xx13- add clear cache
+14- language switcher
+17- languages switcher
+18- arabic slug
+20- add contact us to sittings
+23- add log backend
+3- add logo Backend
+
 xx 1- cookies "cookieconsent"
-2- SEO
-3- breadcrumbs product and article
+xx 9- to top
+xx 10- forms
 xx 4- error
+
+BLOG
+3- breadcrumbs product and article
+5- paginierung :: sor
+15- show subcategory
+16- tags
+17- comments
+
+SHOP
+3- breadcrumbs product and article
 5- paginierung :: sor
 6- add product to cart
 7- remove product
-8- languages rtl
-xx 9- to top
-xx 10- forms
-11- double scroll problem
-12- account area
-13- add clear cache
-14- language switcher
 15- show subcategory
 16- add market
-17- languages switcher
-18- arabic slug
+12- account area
+
+LAST
+2- SEO
+11- double scroll problem
 19- add google recaptcha
-20- add contact us to sittings
 21- How to Add "Remember Me" Login Functionality
 22-  Do you want to send an email to verify the user's email address after registration? (yes/no) [yes]:
-23- add log backend
+

@@ -108,6 +108,7 @@ $bar-height: 50px;
 }
 
 .link-list .link {
+  cursor: pointer;
   margin-right: 10px;
   color: $color-alpha-dark;
 
@@ -117,7 +118,7 @@ $bar-height: 50px;
 }
 
 .link-list .link i {
-  font-size: 11px;
+  font-size: 15px;
   margin-right: 3px;
 }
 
