@@ -1,3 +1,4 @@
+vendor/cocur/slugify/src/RuleProvider/DefaultRuleProvider.php
 symfony serve:start
 symfony serve:stop
 

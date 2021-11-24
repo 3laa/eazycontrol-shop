@@ -4,12 +4,12 @@ xx 2- error
 xx 4- Change Password
 
 Frontend
-xx 22- Why not fast
+
 8- languages rtl
-xx13- add clear cache
+
 14- language switcher
 17- languages switcher
-18- arabic slug
+
 20- add contact us to sittings
 23- add log backend
 3- add logo Backend
@@ -18,6 +18,9 @@ xx 1- cookies "cookieconsent"
 xx 9- to top
 xx 10- forms
 xx 4- error
+xx 22- Why not fast
+xx13- add clear cache
+xx 18- arabic slug
 
 BLOG
 3- breadcrumbs product and article
