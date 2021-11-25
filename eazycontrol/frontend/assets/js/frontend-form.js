@@ -1,3 +1,5 @@
+import axios from "../../../vendor/axios/axios.min";
+
 let $spinner = $('<div class="spinner-wrapper"><div class="spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>')
 let error = {
     'status': false,
@@ -10,6 +12,7 @@ let success = {
     'type': 'success',
     'title': 'Your email was sent successfully',
 }
+
 function initFrontendForm()
 {
     $('.frontend-form form.form').each(function ()
@@ -72,7 +75,6 @@ function frontendFormAlert($parent, result)
     }
 }
 
-$(document).ready(function ()
-{
+export function init() {
     initFrontendForm();
-});
+}

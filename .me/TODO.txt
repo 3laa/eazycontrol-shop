@@ -4,7 +4,7 @@ xx 2- error
 xx 4- Change Password
 
 Frontend
-
+1111- DELETE REGISTER
 8- languages rtl
 
 14- language switcher

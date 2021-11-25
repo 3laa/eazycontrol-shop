@@ -1,3 +1,8 @@
+import WOW from "../../../vendor/wow/wow.min";
+import Swiper from "../../../vendor/swiper/swiper.min";
+import Headroom from "../../../vendor/headroom/headroom.min";
+import {init as initFrontendForm} from "./frontend-form";
+
 function initWOW() {
     let wow = new WOW(
         {
@@ -107,4 +112,5 @@ $(document).ready(function () {
     initSwiper();
     iniHeadroom();
     initMagnific();
+    initFrontendForm();
 });

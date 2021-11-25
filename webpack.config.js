@@ -22,6 +22,7 @@ Encore
      */
     .addStyleEntry('css-backend', ['./eazycontrol/backend/assets/scss/all.scss'])
     .addStyleEntry('css-frontend', ['./eazycontrol/frontend/assets/scss/all.scss'])
+    .addEntry('app-js', './eazycontrol/frontend/assets/js/app.js')
 
 
 
@@ -94,10 +95,10 @@ Encore
         from: './eazycontrol/frontend/assets/images',
         to: 'frontend/images/[path][name].[ext]',
     })
-    .copyFiles({
+    /*.copyFiles({
         from: './eazycontrol/frontend/assets/js',
         to: 'frontend/js/[path][name].[ext]',
-    })
+    })*/
 ;
 
 module.exports = Encore.getWebpackConfig();
