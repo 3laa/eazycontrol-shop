@@ -4,7 +4,7 @@ xx 2- error
 xx 4- Change Password
 
 Frontend
-1111- DELETE REGISTER
+1- alert style
 8- languages rtl
 
 14- language switcher
@@ -13,7 +13,7 @@ Frontend
 20- add contact us to sittings
 23- add log backend
 3- add logo Backend
-
+xx1111- DELETE REGISTER
 xx 1- cookies "cookieconsent"
 xx 9- to top
 xx 10- forms

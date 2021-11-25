@@ -32,7 +32,7 @@ class CommandController extends AbstractController
      */
     public function index(): JsonResponse
     {
-        return $this->json($this->command(array('command' => 'cache:pool:clear', 'pools'=>['cache.global_clearer', 'cache.app'])));
+        return $this->json($this->command(array('command' => 'cache:pool:clear', 'pools'=>['cache.global_clearer', 'cache.app_clearer', 'cache.app'])));
     }
 
     private function command(array $command): array

@@ -47,7 +47,7 @@ class UserSecurityController extends AbstractController
     /**
      * @Route("/register", name="register")
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
+    /*public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
@@ -72,7 +72,7 @@ class UserSecurityController extends AbstractController
         return $this->render('@backend/security/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
-    }
+    }*/
 
     /**
      * @param Request $request
