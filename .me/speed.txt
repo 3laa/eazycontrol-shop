@@ -24,3 +24,9 @@ php bin/console security:encode-password
 composer require symfony/apache-pack
 
 php bin/console make:auth
+
+box-shadow: 0 1px 0 0 red; /* Border bottom */
+box-shadow: 0 -1px 0 0 red; /* Border top */
+box-shadow: -1px 0 0 0 red; /* Border left */
+box-shadow: 1px 0 0 0 red; /* Border right */
+box-shadow: 0 0 0 1px red; /* All the borders by using the spread properties */
