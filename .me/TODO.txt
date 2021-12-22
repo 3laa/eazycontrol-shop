@@ -6,11 +6,9 @@ xx 4- Change Password
 Frontend
 1- alert style
 8- languages rtl
-
 14- language switcher
-17- languages switcher
-
 20- add contact us to sittings
+
 23- add log backend
 3- add logo Backend
 xx1111- DELETE REGISTER
@@ -43,5 +41,5 @@ LAST
 11- double scroll problem
 19- add google recaptcha
 21- How to Add "Remember Me" Login Functionality
-22-  Do you want to send an email to verify the user's email address after registration? (yes/no) [yes]:
+22- Do you want to send an email to verify the user's email address after registration? (yes/no) [yes]:
 
